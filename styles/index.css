@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -57,10 +63,37 @@
 /* OFFER SLIDER */
 
 #p_offerSlider{
+    /* display: flex; */
     width: 80%;
     margin: auto;
     margin-top: 30px;
+    /* overflow: hidden; */
 }
+
+#p_offerSlider img{
+    width: 100%;
+}
+
+#p_offerImage{
+    /* transition: 200ms opacity ease-in-out; */
+    animation: slideInFromRight 1s ease-in;
+}
+
+
+/* This needs to go separate: */
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* BANK OFFERS */
+
 
 #p_bankOffersSection{
     width: 80%;
@@ -69,7 +102,7 @@
     border: 1px solid red;
 }
 
-#p_bankOffersSection h3{
+#p_bankOffersSection h4{
     text-align: center;
 }
 
@@ -84,4 +117,145 @@
 .p_offerDiv img{
     width: 100%;
     height: 100%;
+}
+
+
+/* BEST SELLER */
+
+#p_bestSellersContainer{
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid red;
+}
+
+
+
+
+/* MOST POPULAR CONTAINER */
+
+.p_itemsContainer{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid red;
+    text-align: center;
+}
+
+.p_offerPopularClass{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    border-top: 1px solid lightgray;
+}
+
+.p_popularDiv{
+    cursor: pointer;
+    border: 1px solid lightgray;
+}
+
+.p_popularDiv img{
+    width: 100%;
+    height: 100%;
+}
+
+.p_popularDiv:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+/* DAILY STAPLES DIV */
+#p_dailyStaplesDiv, #p_homeKitchensDiv, #p_brandStoreDiv{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid lightgray;
+}
+
+
+.p_fruitVegDivClass{
+    padding-top: 20px;
+    border-top: 1px solid lightgray;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "a a b c"
+    "a a d e";
+}
+
+.p_foodItemDiv{
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+
+.p_productAdvtSlider{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid red;
+    text-align: center;
+    /* height: 200px; */
+}
+
+.p_productAdvtSlider h4{
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgrey;
+}
+
+
+#p_companyText{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid grey;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#p_companyText ul{
+    padding-left: 30px;
+}
+
+#p_companyText button{
+    padding: 8px;
+    border: 1px solid grey;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#p_companyText button:hover{
+    background-color: #b8b8b8;
+}
+
+
+.p_greenText{
+    color: #7ac947;
+    font-weight: bold;
+}
+
+#p_companyHistory, #p_companyReadLess{
+    margin-top: 20px;
+    display: none;
+}
+
+
+/* Swiper Properties */
+
+.swiper {
+    width: 100%;
+}
+
+.swiper img{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: #8e8e8e;
 }
