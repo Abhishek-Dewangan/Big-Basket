@@ -122,13 +122,6 @@ body{
 
 /* BEST SELLER */
 
-#p_bestSellersContainer{
-    width: 80%;
-    height: 200px;
-    margin: auto;
-    margin-top: 30px;
-    border: 1px solid red;
-}
 
 
 
@@ -258,4 +251,97 @@ body{
 
 .swiper .swiper-button-prev, .swiper .swiper-button-next{
     color: #8e8e8e;
+}
+
+
+/* BEST SELLERS CONTAINER */
+
+#p_bestSellersContainer{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid red;
+}
+
+#p_bestSellersContainer h4{
+    text-align: center;
+}
+
+#p_bestSellersContainer a{
+    color: #fff;
+    padding: 8px;
+    background-color: #7ac947;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+#p_bestSellersDiv{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 400px;
+    grid-gap: 20px;
+}
+
+#p_bestSellersDiv > div{
+    border: 1px solid blue;
+    padding: 5px;
+}
+
+.p_itemDiscountDiv{
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
+    text-align: right;
+    color: crimson;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.p_redAsterisk img{
+    width: 20px;
+    height: 20px;
+}
+
+.p_itemthumbnailDiv{
+    position: relative;
+    border: 1px solid red;
+    padding: 15px;
+    text-align: center;
+}
+
+.p_vnvicon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 90%;
+    left: 5%;
+}
+
+.p_itemBrandNameDiv{
+    font-size: 13px;
+    color: grey;
+}
+
+.p_itemNameDiv{
+    font-size: 13px;
+}
+
+.p_itemPriceDeliveryDiv{
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+
+
+.p_itemAddCartBtn{
+    background-color: #ffd65c;
+    cursor: pointer;
+    border: none;
+}
+
+.p_itemAddCartBtn:hover{
+    background-color: #ffc006;
 }
