@@ -15,7 +15,7 @@ body{
 
 #p_topSlider{
     width: 100vw;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .carousel-indicators li{
@@ -48,7 +48,7 @@ body{
     width: 80%;
     margin: auto;
     margin-top: 30px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
@@ -74,24 +74,6 @@ body{
     width: 100%;
 }
 
-#p_offerImage{
-    /* transition: 200ms opacity ease-in-out; */
-    animation: slideInFromRight 1s ease-in;
-}
-
-
-/* This needs to go separate: */
-
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(50%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
 /* BANK OFFERS */
 
 
@@ -99,7 +81,7 @@ body{
     width: 80%;
     margin: auto;
     margin-top: 30px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #p_bankOffersSection h4{
@@ -137,7 +119,7 @@ body{
     width: 80%;
     margin: auto;
     margin-top: 30px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-align: center;
 }
 
@@ -196,7 +178,7 @@ body{
     width: 80%;
     margin: auto;
     margin-top: 30px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-align: center;
     /* height: 200px; */
 }
@@ -265,7 +247,7 @@ body{
     width: 80%;
     margin: auto;
     margin-top: 30px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #p_bestSellersContainer h4{
@@ -293,7 +275,7 @@ body{
 }
 
 .p_itemMasterDiv{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding: 5px;
     display: flex;
     flex-direction: column;
