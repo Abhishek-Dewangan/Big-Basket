@@ -256,7 +256,7 @@ let bestSellersDB = [
       prod_thumbnail: "https://www.bigbasket.com/media/uploads/p/s/10000447_15-bb-royal-refined-sugar-sulphurless.jpg",
       prod_price_unit: "kg",
       prod_piece_unit: "",
-      prod_brand: "bb Royal",
+      prod_brand: "BB Royal",
       prod_rating: "3.9",
       prod_type: "veg"
     },

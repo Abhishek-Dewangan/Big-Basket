@@ -49,13 +49,13 @@ body{
 
 #p_filtersContainer{
     width: 25%;
-    height: 200px;
+    /* height: 200px; */
     border: 1px solid blue;
 }
 
 
 #p_productsContainer{
-    width: 70%;
+    width: 73%;
     /* height: 200px; */
     padding: 10px;
     border: 1px solid blue;
@@ -260,3 +260,35 @@ body{
 .p_itemAddCartBtn:hover{
     background-color: #ffc006;
 }
+
+
+
+/* FILTER AREA */
+
+#p_brandsFilter{
+    width: 95%;
+    margin: auto;
+    border: 1px solid blue;
+}
+
+#p_brandsFilter > h5{
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+}
+
+.p_filterName{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #84c225;
+}
+
+#p_brandCheckbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.p_checkbox{
+    margin-right: 12px;
+    width: 15px;
+    height: 15px;
+}
+

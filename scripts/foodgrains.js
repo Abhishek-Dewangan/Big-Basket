@@ -266,11 +266,36 @@ const p_sortData = (sortValue) => {
 
 // Utitlity Function to get list of all brands
 
-let p_prodBrandList = foodGrainsDB.filter((el) => {
-    return (el.prod_brand !== "");
+let p_prodBrandList = {};
+
+foodGrainsDB.forEach((el) => {
+    p_prodBrandList[el.prod_brand] = 1;
 })
 
-console.log("Product Brands", p_prodBrandList);
+p_prodBrandList = Object.keys(p_prodBrandList);
+
+// console.log("Product Brands", p_prodBrandList);
+
+const p_createCheckBoxFunction = (container, data) => {
+    container.innerHTML = null;
+    data.forEach((el) => {
+        let p_label = document.createElement("label");
+        p_label.setAttribute("class", "p_checklabel");
+        
+        let p_checkbox = document.createElement("input");
+        p_checkbox.setAttribute("class", "p_checkbox");
+        p_checkbox.setAttribute("type", "checkbox");
+        p_checkbox.setAttribute("value", el);
+
+        p_label.append(p_checkbox, el);
+
+        container.append(p_label);
+    })
+};
+
+let p_brandCheckbox = document.getElementById("p_brandCheckbox");
+
+p_createCheckBoxFunction(p_brandCheckbox, p_prodBrandList);
 
 
 
