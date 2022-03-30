@@ -1,5 +1,15 @@
 let prodData = [
     {
+        "prod_name": "Onion",
+        "prod_price": "100",
+        "prod_strike_price": "150",
+        "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/s/40050957_2-fresho-onion-organically-grown.jpg",
+        "prod_quantity": "1",
+        "prod_price_unit": "kg",
+        "prod_category": "fruits",
+        "prod_brand": "Fresho"
+    },
+    {
         "prod_name": "Coriander",
         "prod_price": "12",
         "prod_strike_price": "15",
@@ -7,7 +17,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Banana",
@@ -17,7 +27,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Green Peas Fresh",
@@ -27,7 +37,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Apple",
@@ -37,7 +47,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Cucumber",
@@ -47,7 +57,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Beetroot",
@@ -57,7 +67,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Orange",
@@ -67,7 +77,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Watermelon",
@@ -77,17 +87,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "fresho"
-    },
-    {
-        "prod_name": "Onion",
-        "prod_price": "150",
-        "prod_strike_price": "100",
-        "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/s/40050957_2-fresho-onion-organically-grown.jpg",
-        "prod_quantity": "1",
-        "prod_price_unit": "kg",
-        "prod_category": "fruits",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Tomato",
@@ -97,7 +97,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Potato",
@@ -107,17 +107,17 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
-        "prod_name": "Caurliflower",
+        "prod_name": "Cauliflower",
         "prod_price": "19",
         "prod_strike_price": "23",
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Ladis Finger",
@@ -127,7 +127,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Graps",
@@ -137,7 +137,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Pomegranate",
@@ -147,7 +147,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Bringel",
@@ -157,7 +157,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Ginger",
@@ -167,7 +167,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Kiwi",
@@ -177,7 +177,7 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "fresho"
+        "prod_brand": "Fresho"
     },
     {
         "prod_name": "Basmati Rice",
@@ -373,8 +373,36 @@ let prodData = [
         "prod_price_unit": "kg",
         "prod_category": "bakery",
         "prod_brand": null
-    }
+    },
+    {
+        "prod_name": "Fresho Apple-Red Delicious/Washington 4pcs+BB Home Vegetable & Fruit Wash 500ml",
+        "prod_price": "324",
+        "prod_strike_price": "365",
+        "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/mm/1212557_1-bb-combo-fresho-apple-red-deliciouswashington-4pcsbb-home-vegetable-fruit-wash-500ml.jpg",
+        "prod_price_unit": "kg",
+        "prod_category": "vegetables",
+        "prod_brand": "BB Combo"
+    },
+    {
+        "prod_name": "Fresho Bitter Gourd 500 g + BB Home Vegetable & Fruit Wash 500 ml",
+        "prod_price": "199",
+        "prod_strike_price": "209",
+        "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/mm/1212556_1-bb-combo-fresho-bitter-gourd-500-g-bb-home-vegetable-fruit-wash-500-ml.jpg",
+        "prod_price_unit": "kg",
+        "prod_category": "vegetables",
+        "prod_brand": "BB Combo"
+    },
+    {
+        "prod_name": "Fresho Lettuce - Iceberg 500 g + BB Home Vegetable & Fruit Wash 500 ml",
+        "prod_price": "224",
+        "prod_strike_price": "250",
+        "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/mm/1212560_1-bb-combo-fresho-lettuce-iceberg-500-g-bb-home-vegetable-fruit-wash-500-ml.jpg",
+        "prod_price_unit": "kg",
+        "prod_category": "vegetables",
+        "prod_brand": "BB Combo"
+    },
 ]
+
 localStorage.setItem("product", JSON.stringify(prodData))
 
 let data = JSON.parse(localStorage.getItem("product"));

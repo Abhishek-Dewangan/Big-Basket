@@ -14,9 +14,26 @@ $('.carousel').carousel({
 
 // Function to create Items Div
 
-let foodGrainsDB = JSON.parse(localStorage.getItem("foodGrainsDB")) || [];
+// let foodGrainsDB = JSON.parse(localStorage.getItem("foodGrainsDB")) || [];
 
-console.log(foodGrainsDB);
+// console.log(foodGrainsDB);
+
+let productsDB = JSON.parse(localStorage.getItem("product")) || [];
+
+let p_fruitsVegDB = [];
+
+p_fruitsVegDB = productsDB.filter((el) => {
+    if(el.prod_category === "fruits" || el.prod_category === "vegetables") {return el;};
+})
+
+let p_randomRatings = ["4.1", "3.8", "4", "3.7", "4.6", "4.3"];
+
+p_fruitsVegDB.forEach((el) => {
+    let random_rating = Math.floor(Math.random() * p_randomRatings.length);
+    el.prod_rating = p_randomRatings[random_rating];
+})
+
+// console.log("fruits db", p_fruitsVegDB);
 
 let p_productsDisplayGrid = document.getElementById("p_productsDisplayGrid");
 
@@ -199,14 +216,14 @@ const p_createItemsDiv = (container, data) => {
     })
 }
 
-p_createItemsDiv(p_productsDisplayGrid, foodGrainsDB);
+p_createItemsDiv(p_productsDisplayGrid, p_fruitsVegDB);
 
 function p_showTotalItems(items){
     let p_totalItems = document.getElementById("p_totalItems");
     p_totalItems.textContent = `(${items.length})`;
 }
 
-p_showTotalItems(foodGrainsDB);
+p_showTotalItems(p_fruitsVegDB);
 
 // Utility Area to Create Sort Function and display sorted data
 let p_sorter = document.getElementById("p_foodgrainSorter");
@@ -216,7 +233,7 @@ p_sorter.addEventListener("change", () => {
 
 
 const p_sortData = (sortValue) => {
-    let tempFoodDB = foodGrainsDB.slice();
+    let tempFoodDB = p_fruitsVegDB.slice();
     if(sortValue !== "--"){
         if(sortValue === "p_pop"){
             // sort by ratings
@@ -274,7 +291,7 @@ const p_sortData = (sortValue) => {
 
 let p_prodBrandList = {};
 
-foodGrainsDB.forEach((el) => {
+p_fruitsVegDB.forEach((el) => {
     p_prodBrandList[el.prod_brand] = 1;
 })
 
@@ -285,7 +302,7 @@ p_prodBrandList = Object.keys(p_prodBrandList);
 let p_brandFilters = [];
 
 const p_filterByBrandFunction = (filters) => {
-    let p_filteredFoodGrains = foodGrainsDB.slice();
+    let p_filteredFoodGrains = p_fruitsVegDB.slice();
 
     p_filteredFoodGrains = p_filteredFoodGrains.filter((el) => {
         if(filters.includes(el.prod_brand)){
@@ -295,7 +312,7 @@ const p_filterByBrandFunction = (filters) => {
 
     // console.log("Filtered", p_filteredFoodGrains);
     if(p_filteredFoodGrains.length === 0){
-        p_filteredFoodGrains = foodGrainsDB.slice();
+        p_filteredFoodGrains = p_fruitsVegDB.slice();
     }
 
     p_createItemsDiv(p_productsDisplayGrid, p_filteredFoodGrains);
@@ -306,29 +323,29 @@ const p_filterByBrandFunction = (filters) => {
 
 // Creating Food Preferences
 
-let p_foodPrefFilters = [];
+// let p_foodPrefFilters = [];
 
 
-const p_filterByFoodPreferencesFunction = (data) => {
-    let p_filterData = foodGrainsDB.slice();
-    // console.log("filters", data);
-    p_filterData = foodGrainsDB.filter((el) => {
-        if(data.includes(el.prod_type)){
-            return el;
-        }
-    })
+// const p_filterByFoodPreferencesFunction = (data) => {
+//     let p_filterData = p_fruitsVegDB.slice();
+//     // console.log("filters", data);
+//     p_filterData = p_fruitsVegDB.filter((el) => {
+//         if(data.includes(el.prod_type)){
+//             return el;
+//         }
+//     })
 
-    if(data.length === 0){
-        p_filterData = foodGrainsDB.slice();
-    }
+//     if(data.length === 0){
+//         p_filterData = p_fruitsVegDB.slice();
+//     }
 
-    // console.log(p_filterData);
+//     // console.log(p_filterData);
 
-    p_createItemsDiv(p_productsDisplayGrid,  p_filterData);
+//     p_createItemsDiv(p_productsDisplayGrid,  p_filterData);
 
-    p_showTotalItems(p_filterData);
+//     p_showTotalItems(p_filterData);
 
-}
+// }
 
 // Funtion Area to Filter by Price
 
@@ -341,7 +358,7 @@ const p_filterByPriceFunction = (filters) => {
     let p_filteredItems = [];
 
     if(filters.includes("Less Than Rs. 100")){
-        foodGrainsDB.forEach((el) => {
+        p_fruitsVegDB.forEach((el) => {
             if(el.prod_price <= 100){
                 p_filteredItems.push(el);
             }
@@ -349,7 +366,7 @@ const p_filterByPriceFunction = (filters) => {
     }
 
     if(filters.includes("Rs. 100 - Rs. 500")){
-        foodGrainsDB.forEach((el) => {
+        p_fruitsVegDB.forEach((el) => {
             if(el.prod_price > 100 && el.prod_price <= 500){
                 p_filteredItems.push(el);
             }
@@ -357,7 +374,7 @@ const p_filterByPriceFunction = (filters) => {
     }
 
     if(filters.includes("More Than Rs. 500")){
-        foodGrainsDB.forEach((el) => {
+        p_fruitsVegDB.forEach((el) => {
             if(el.prod_price > 500){
                 p_filteredItems.push(el);
             }
@@ -365,7 +382,7 @@ const p_filterByPriceFunction = (filters) => {
     }
 
     if(filters.length === 0){
-        p_filteredItems = foodGrainsDB.slice();
+        p_filteredItems = p_fruitsVegDB.slice();
     }
 
     p_createItemsDiv(p_productsDisplayGrid,  p_filteredItems);
@@ -382,8 +399,8 @@ let p_discountFilters = [];
 
 const p_filterByDiscountFunction = (filters) => {
     let p_filterDiscountedData = [];
-    console.log(filters);
-    let tempDB = foodGrainsDB.slice();
+    // console.log(filters);
+    let tempDB = p_fruitsVegDB.slice();
 
     // "Upto 10%", "10% - 25%", "More Than 25%"
 
@@ -450,16 +467,6 @@ const p_createCheckBoxFunction = (container, data, type) => {
                     p_filterByBrandFunction(p_brandFilters);
                 }
 
-                if(event.target.name === "food"){
-                    if(event.target.value === "Vegetarian"){
-                        p_foodPrefFilters.push("veg");
-                    }
-                    else{
-                        p_foodPrefFilters.push("nonveg");
-                    }
-                    // console.log(p_foodPrefFilters);
-                    p_filterByFoodPreferencesFunction(p_foodPrefFilters);
-                }
 
                 if(event.target.name === "price"){
                     p_filterPriceSelected.push(event.target.value);
@@ -482,18 +489,6 @@ const p_createCheckBoxFunction = (container, data, type) => {
                     p_filterByBrandFunction(p_brandFilters);
                 }
 
-                if(event.target.name === "food"){
-                    p_foodPrefFilters = p_foodPrefFilters.filter((el) => {
-                        // console.log(event.target.value)
-                        // console.log(el[0]);
-                        if(el[0] !== event.target.value.toLowerCase()[0]){
-                            return el;
-                        }
-                    })
-
-                    // console.log(p_foodPrefFilters);
-                    p_filterByFoodPreferencesFunction(p_foodPrefFilters);
-                }
 
                 if(event.target.name === "price"){
                     p_filterPriceSelected = p_filterPriceSelected.filter((el) => {
@@ -528,11 +523,11 @@ p_createCheckBoxFunction(p_brandCheckbox, p_prodBrandList, "brand");
 
 // Creating Food Preferences Checkboxes
 
-let p_foodPref = ["Vegetarian", "Non-Vegetarian"];
+// let p_foodPref = ["Vegetarian", "Non-Vegetarian"];
 
-let p_foodPrefCheckbox = document.getElementById("p_foodPrefCheckbox");
+// let p_foodPrefCheckbox = document.getElementById("p_foodPrefCheckbox");
 
-p_createCheckBoxFunction(p_foodPrefCheckbox, p_foodPref, "food");
+// p_createCheckBoxFunction(p_foodPrefCheckbox, p_foodPref, "food");
 
 
 // Creating Price Filter
@@ -563,8 +558,8 @@ document.getElementById("p_resetButton").addEventListener("click", () =>{
         checkboxes[i].checked = false;
     }
 
-    p_createItemsDiv(p_productsDisplayGrid,  foodGrainsDB);
+    p_createItemsDiv(p_productsDisplayGrid,  p_fruitsVegDB);
 
-    p_showTotalItems(foodGrainsDB);
+    p_showTotalItems(p_fruitsVegDB);
 
 })

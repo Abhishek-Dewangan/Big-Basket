@@ -349,3 +349,15 @@ body{
 
 
 
+/* NEW CSS */
+
+#p_topImgBanner{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#p_topImgBanner > img{
+    width: 100%;
+}
