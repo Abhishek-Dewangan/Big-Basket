@@ -1,5 +1,11 @@
 import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 
+import createFooter from '../components/footer.js';
+
+let footer = document.getElementById("footer");
+footer.innerHTML = createFooter();
+
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
