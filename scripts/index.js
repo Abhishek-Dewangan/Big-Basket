@@ -6,6 +6,8 @@ let footer = document.getElementById("footer");
 footer.innerHTML = createFooter();
 
 
+// Slider for all images - DONT TOUCH
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -292,13 +294,15 @@ document.getElementById("p_companyReadLess").addEventListener("click", () => {
 
 // Function Area to create Best Sellers Slider
 
+// SLIDER FOR BEST SELLERS ITEMS  ----- *** DONT TOUCH ****
+
 const swiper2 = new Swiper('#swiper2', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
     // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
+    //     delay: 6000,
+    //     disableOnInteraction: true,
     // },
     400: {
       slidesPerView: 1,
