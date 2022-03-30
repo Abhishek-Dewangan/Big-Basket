@@ -280,3 +280,264 @@ document.getElementById("p_companyReadLess").addEventListener("click", () => {
 })
 
 
+
+
+
+
+// Function Area to create Best Sellers Slider
+
+const swiper2 = new Swiper('#swiper2', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
+    400: {
+      slidesPerView: 1,
+      spaceBetween: 50, },
+  
+    // If we need pagination
+    // pagination: {
+    //   el: '.swiper-pagination',
+    // },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
+
+
+
+let bestSellersDB = JSON.parse(localStorage.getItem("bestSellersDB")) || [];
+
+let p_redIconUrl = "https://upload.wikimedia.org/wikipedia/commons/8/8d/Eo_circle_red_asterisk.svg";
+
+let p_redAsteriskCode = `<img class="p_redAsterisk" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Eo_circle_red_asterisk.svg" alt="">`;
+
+let p_nonvegIcon = "https://freesvg.org/img/1531813245.png";
+
+let p_vegIcon = "https://freesvg.org/img/1531813273.png";
+
+let p_ratingStarIcon = `<i class="fa-solid fa-star"></i>`;
+
+let p_truckIcon = `<i class="fa-solid fa-truck"></i>`;
+
+let p_basketIcon = `<i class="fa-solid fa-basket-shopping"></i>`;
+
+
+
+// Function to add swiper class
+
+let p_bestSellerSwiper = document.getElementById("p_bestSellerSwiper");
+
+const appendToSwiper = (div_data) => {
+    let swiper_div = document.createElement("div");
+    swiper_div.setAttribute("class", "swiper-slide");
+
+    swiper_div.append(div_data);
+
+    p_bestSellerSwiper.append(swiper_div);
+}
+
+// let p_bestSellersDiv = document.getElementById("p_bestSellersDiv");
+
+
+
+const p_createItemsDiv = (p_bestSellersDiv, data) => {
+    data.forEach((el) => {
+        let {prod_name: pname, 
+            prod_price: pprice, 
+            prod_strike_price: psprice, 
+            prod_thumbnail: pimage, 
+            prod_price_unit: punit,
+            prod_piece_unit: ppcunit,
+            prod_brand: pbrand,
+            prod_rating: prating,
+            prod_type: ptype
+        } = el;
+
+
+        // Master Div
+        let p_itemMasterDiv = document.createElement("div");
+        p_itemMasterDiv.setAttribute("class", "p_itemMasterDiv");
+
+
+        // Discount Div
+        let p_itemDiscountDiv = document.createElement("div");
+        p_itemDiscountDiv.setAttribute("class", "p_itemDiscountDiv");
+        if(psprice != 0){
+            let p_discount = Math.ceil(((psprice - pprice)/psprice) * 100);
+            p_itemDiscountDiv.innerHTML = `GET ${p_discount}% OFF ${p_redAsteriskCode}`;
+        }
+        else{
+            p_itemDiscountDiv.textContent = "ON OFFER"
+        }
+        
+        // Thumbnail Div
+        let p_itemthumbnailDiv = document.createElement("p_itemthumbnailDiv");
+        p_itemthumbnailDiv.setAttribute("class", "p_itemthumbnailDiv");
+
+        let p_foodthumbnail = document.createElement("img");
+        p_foodthumbnail.setAttribute("class", "p_foodthumbnail");
+        p_foodthumbnail.src = pimage;
+
+        if(ptype === "veg"){
+            let p_vnvicon = document.createElement("img");
+            p_vnvicon.setAttribute("class", "p_vnvicon");
+            p_vnvicon.src = p_vegIcon;
+            p_itemthumbnailDiv.append(p_foodthumbnail, p_vnvicon);
+        }
+        else if(ptype === "nonveg"){
+            let p_vnvicon = document.createElement("img");
+            p_vnvicon.setAttribute("class", "p_vnvicon");
+            p_vnvicon.src = p_nonvegIcon;
+            p_itemthumbnailDiv.append(p_foodthumbnail, p_vnvicon);
+        }
+        else{
+            p_itemthumbnailDiv.append(p_foodthumbnail);
+        }
+
+
+        // Item Brand Name Div
+        let p_itemBrandNameDiv = document.createElement("div");
+        p_itemBrandNameDiv.setAttribute("class", "p_itemBrandNameDiv");
+        p_itemBrandNameDiv.textContent = pbrand;
+
+        // Item Name Div
+        let p_itemNameDiv = document.createElement("div");
+        p_itemNameDiv.setAttribute("class", "p_itemNameDiv");
+        p_itemNameDiv.textContent = pname;
+
+        // Item Rating Div
+        let p_itemRatingDiv = document.createElement("div");
+        p_itemRatingDiv.setAttribute("class", "p_itemRatingDiv");
+        if(prating==""){
+            prating = "4";
+        }
+        p_itemRatingDiv.innerHTML = `${prating} ${p_ratingStarIcon}`;
+
+        // Item Quantity Select Div
+        let p_itemQuantitySelectDiv = document.createElement("div");
+        p_itemQuantitySelectDiv.setAttribute("class", "p_itemQuantitySelectDiv");
+
+        if(punit === "pcs"){
+            p_itemQuantitySelectDiv.textContent = `${ppcunit} pcs`;
+        }
+        else{
+            let p_itemQuantitySelector = document.createElement("select");
+            p_itemQuantitySelector.setAttribute("class", "p_itemQuantitySelector");
+
+            for(let i=1; i<=4; i++){
+                let value = `${i} ${punit} - Rs. ${pprice * i}`;
+
+                let p_selectorOption = document.createElement("option");
+                p_selectorOption.setAttribute("value", i);
+                p_selectorOption.textContent = value;
+
+
+                p_itemQuantitySelector.append(p_selectorOption);
+            }
+
+            p_itemQuantitySelectDiv.append(p_itemQuantitySelector);
+        }
+
+
+        // Item Price Delivery Div
+        let p_itemPriceDeliveryDiv = document.createElement("p_itemPriceDeliveryDiv");
+        p_itemPriceDeliveryDiv.setAttribute("class", "p_itemPriceDeliveryDiv");
+
+        let p_itemPriceDiv = document.createElement("p_itemPriceDiv");
+        p_itemPriceDiv.setAttribute("class", "p_itemPriceDiv");
+
+        let p_MRP = document.createElement("p");
+        p_MRP.textContent = "MRP";
+        
+        let p_itemStrikePrice = document.createElement("p");
+        p_itemStrikePrice.setAttribute("class", "p_itemStrikePrice");
+        if(psprice != 0)
+            {p_itemStrikePrice.textContent = `Rs. ${psprice}`;}
+
+        let p_itemPrice = document.createElement("p");
+        p_itemPrice.setAttribute("class", "p_itemPrice");
+        p_itemPrice.textContent = `Rs. ${pprice}`;
+
+        p_itemPriceDiv.append(p_MRP, p_itemStrikePrice, p_itemPrice);
+
+        let p_itemShippingInfoDiv = document.createElement("div");
+        p_itemShippingInfoDiv.setAttribute("class", "p_itemShippingInfoDiv");
+
+        p_itemShippingInfoDiv.innerHTML = `${p_truckIcon} Standard Delivery: Tomorrow 6:30AM-8:30PM`;
+
+        let p_itemQtyCartDiv = document.createElement("div");
+        p_itemQtyCartDiv.setAttribute("class", "p_itemQtyCartDiv");
+        p_itemQtyCartDiv.textContent = "Qty";
+
+        let p_itemQtyTextBox = document.createElement("input");
+        p_itemQtyTextBox.setAttribute("class", "p_itemQtyTextBox");
+
+        p_itemQtyTextBox.setAttribute("min", "0");
+        p_itemQtyTextBox.setAttribute("max", "10");
+        p_itemQtyTextBox.setAttribute("type", "number")
+        p_itemQtyTextBox.setAttribute("value", "1");
+
+        let p_itemAddCartBtn = document.createElement("button");
+        p_itemAddCartBtn.setAttribute("class", "p_itemAddCartBtn");
+
+        p_itemAddCartBtn.innerHTML = `ADD ${p_basketIcon}`;
+
+        p_itemQtyCartDiv.append(p_itemQtyTextBox, p_itemAddCartBtn);
+
+        p_itemPriceDeliveryDiv.append(p_itemPriceDiv, p_itemShippingInfoDiv, p_itemQtyCartDiv);
+
+
+        // Appending to master item div
+        p_itemMasterDiv.append(p_itemDiscountDiv, 
+            p_itemthumbnailDiv, 
+            p_itemBrandNameDiv, 
+            p_itemNameDiv,
+            p_itemRatingDiv,
+            p_itemQuantitySelectDiv,
+            p_itemPriceDeliveryDiv
+            );
+
+        
+            p_bestSellersDiv.append(p_itemMasterDiv);
+    })
+
+    appendToSwiper(p_bestSellersDiv);
+}
+
+
+
+// Utility Function to create 5 Items Div and append to slider
+
+for(let i=0; i<bestSellersDB.length; i+=5){
+    let p_bestSellersDiv = document.createElement("div");
+    p_bestSellersDiv.setAttribute("id", "p_bestSellersDiv");
+
+    let temp = bestSellersDB.slice(i, i+5);
+
+    p_createItemsDiv(p_bestSellersDiv, temp);
+}
+
+
+
+
+
+
+// {
+//     prod_name: "Chyawanprash - 2X Immunity",
+//     prod_price: "281",
+//     prod_strike_price: "375",
+//     prod_thumbnail: "https://www.bigbasket.com/media/uploads/p/s/118412_16-dabur-chyawanprash-2x-immunity.jpg",
+//     prod_price_unit: "kg",
+//     prod_piece_unit: "",
+//     prod_brand: "Dabur",
+//     prod_rating: "3.8",
+//     prod_type: "--"
+//   }

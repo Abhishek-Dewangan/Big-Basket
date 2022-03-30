@@ -11,6 +11,17 @@ let bestSellersDB = [
       prod_type: "nonveg"
     },
     {
+      prod_name: "Green Peas",
+      prod_price: "101",
+      prod_strike_price: "126",
+      prod_thumbnail: "https://www.bigbasket.com/media/uploads/p/s/10000284_11-fresho-green-peas.jpg",
+      prod_price_unit: "kg",
+      prod_piece_unit: "",
+      prod_brand: "fresho",
+      prod_rating: "",
+      prod_type: "veg"
+    },
+    {
       prod_name: "Farm Eggs - Table Tray, Medium, Antibiotic Residue-Free",
       prod_price: "209",
       prod_strike_price: "350",
@@ -66,17 +77,6 @@ let bestSellersDB = [
       prod_type: "--"
     },
     {
-      prod_name: "Green Peas",
-      prod_price: "101",
-      prod_strike_price: "126",
-      prod_thumbnail: "https://www.bigbasket.com/media/uploads/p/s/10000284_11-fresho-green-peas.jpg",
-      prod_price_unit: "kg",
-      prod_piece_unit: "",
-      prod_brand: "fresho",
-      prod_rating: "",
-      prod_type: "veg"
-    },
-    {
       prod_name: "Nacho Chips - Jalapeno",
       prod_price: "30",
       prod_strike_price: "0",
@@ -125,7 +125,7 @@ let bestSellersDB = [
       prod_price: "46",
       prod_strike_price: "60",
       prod_thumbnail: "https://www.bigbasket.com/media/uploads/p/s/10000407_12-bb-royal-refined-sugar-sulphurless.jpg",
-      prod_price_unit: "--",
+      prod_price_unit: "kg",
       prod_piece_unit: "",
       prod_brand: "BB Royal",
       prod_rating: "4",
