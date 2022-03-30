@@ -119,6 +119,11 @@ body{
     height: 100%;
 }
 
+.p_offerDiv:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+
 
 /* BEST SELLER */
 
@@ -281,13 +286,18 @@ body{
 #p_bestSellersDiv{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 400px;
+    grid-template-rows: 520px;
     grid-gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid lightgray;
 }
 
 #p_bestSellersDiv > div{
     border: 1px solid blue;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .p_itemDiscountDiv{
@@ -306,7 +316,7 @@ body{
 
 .p_itemthumbnailDiv{
     position: relative;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 15px;
     text-align: center;
 }
@@ -328,18 +338,93 @@ body{
     font-size: 13px;
 }
 
-.p_itemPriceDeliveryDiv{
-    display: flex;
-    justify-content: flex-start;
-    gap: 5px;
+.p_itemRatingDiv{
+    background-color: #e3ebda;
+    color: #72a545;
+    width: 25%;
+    padding: 2px;
+    padding-left: 4px;
+    font-weight: bold;
 }
 
+
+
+.p_itemQuantitySelectDiv select {
+    width: 100%;
+    margin: auto;
+}
+
+.p_itemPriceDeliveryDiv{
+    background-color: #f4f3f2;
+    padding: 5px;
+    padding-bottom: 10px;
+    margin-top: -8px;
+}
+
+/* .p_itemPriceDeliveryDiv > div{
+    border: 1px solid blue;
+} */
+
+.p_itemPriceDiv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* .p_itemPriceDiv p{
+    border: 1px solid red;
+} */
+
+.p_itemStrikePrice{
+    text-decoration: line-through;
+    font-size: 14px;
+    /* border: 1px solid red; */
+}
+
+.p_itemPrice{
+    font-size: 18px;
+    /* border: 1px solid red; */
+    /* font-weight: bold; */
+}
+
+.p_itemShippingInfoDiv{
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+.p_itemShippingInfoDiv i{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.p_itemShippingInfoDiv i:hover{
+    color: #84c225;
+}
+
+.p_itemQtyCartDiv{
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.p_itemQtyTextBox{
+    text-align: center;
+    padding: 3px;
+}
 
 
 .p_itemAddCartBtn{
     background-color: #ffd65c;
     cursor: pointer;
     border: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.p_itemAddCartBtn i{
+    margin-left: 5px;
 }
 
 .p_itemAddCartBtn:hover{
