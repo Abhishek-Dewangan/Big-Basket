@@ -350,3 +350,57 @@ body{
 
 
 
+
+
+
+
+
+
+/* CSS Media Queries */
+
+@media all and (max-width: 700px){
+    
+    #p_topSlider{
+        margin-top: 0px;
+    }
+
+    .carousel-indicators li{
+        display: none;
+    }
+
+    #p_topFoodContainer{
+        width: 95%;
+        margin: auto;
+        flex-direction: column-reverse;
+    }
+
+    #p_filtersContainer{
+        display: block;
+        width: 95%;
+        margin: auto;
+    }
+
+    #p_productsContainer{
+        width: 100%;
+    }
+
+    #p_productsHeader select{
+        font-size: 10px;
+    }
+
+    #p_productsHeader > h3{
+        font-size: 17px;
+    }
+
+    #p_productAll p{
+        width: 25%;
+    }
+
+    #p_productsDisplayGrid{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+

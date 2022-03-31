@@ -457,6 +457,10 @@ body{
         display: none;
     }
 
+    #p_topSlider{
+        margin-top: 0px;
+    }
+
     .carousel-indicators li{
         display: none;
     }
