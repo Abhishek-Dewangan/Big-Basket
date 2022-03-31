@@ -121,17 +121,6 @@ let bestSellersDB = [
       prod_type: "veg"
     },
     {
-      prod_name: "Refined Sugar (Sulphurless)",
-      prod_price: "46",
-      prod_strike_price: "60",
-      prod_thumbnail: "https://www.bigbasket.com/media/uploads/p/s/10000407_12-bb-royal-refined-sugar-sulphurless.jpg",
-      prod_price_unit: "kg",
-      prod_piece_unit: "",
-      prod_brand: "BB Royal",
-      prod_rating: "4",
-      prod_type: "veg"
-    },
-    {
       prod_name: "Durum Wheat Pasta - Fusilli",
       prod_price: "125",
       prod_strike_price: "250",
@@ -218,7 +207,18 @@ let bestSellersDB = [
       prod_brand: "Dabur",
       prod_rating: "3.8",
       prod_type: "--"
-    }
+    },
+    {
+      prod_name: "Refined BB Royal Sugar (Sulphurless)",
+      prod_price: "46",
+      prod_strike_price: "60",
+      prod_thumbnail: "https://www.bigbasket.com/media/uploads/p/s/10000407_12-bb-royal-refined-sugar-sulphurless.jpg",
+      prod_price_unit: "kg",
+      prod_piece_unit: "",
+      prod_brand: "BB Royal",
+      prod_rating: "4",
+      prod_type: "veg"
+    },
   ]
 
 
@@ -247,17 +247,6 @@ let bestSellersDB = [
       prod_piece_unit: "",
       prod_brand: "Aashirvaad",
       prod_rating: "4.1",
-      prod_type: "veg"
-    },
-    {
-      prod_name: "Refined Sugar (Sulphurless)",
-      prod_price: "48",
-      prod_strike_price: "60",
-      prod_thumbnail: "https://www.bigbasket.com/media/uploads/p/s/10000447_15-bb-royal-refined-sugar-sulphurless.jpg",
-      prod_price_unit: "kg",
-      prod_piece_unit: "",
-      prod_brand: "BB Royal",
-      prod_rating: "3.9",
       prod_type: "veg"
     },
     {
@@ -368,6 +357,17 @@ let bestSellersDB = [
       prod_piece_unit: "",
       prod_brand: "Amul",
       prod_rating: "4",
+      prod_type: "veg"
+    },
+    {
+      prod_name: "Refined Sugar (Sulphurless)",
+      prod_price: "48",
+      prod_strike_price: "60",
+      prod_thumbnail: "https://www.bigbasket.com/media/uploads/p/s/10000447_15-bb-royal-refined-sugar-sulphurless.jpg",
+      prod_price_unit: "kg",
+      prod_piece_unit: "",
+      prod_brand: "BB Royal",
+      prod_rating: "3.9",
       prod_type: "veg"
     },
     {

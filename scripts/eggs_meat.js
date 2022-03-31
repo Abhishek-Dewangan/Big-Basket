@@ -196,6 +196,10 @@ const p_createItemsDiv = (container, data) => {
 
         p_itemAddCartBtn.innerHTML = `ADD ${p_basketIcon}`;
 
+        p_itemAddCartBtn.addEventListener("click", () => {
+            p_addToCart(el, p_itemQtyTextBox);
+        })
+
         p_itemQtyCartDiv.append(p_itemQtyTextBox, p_itemAddCartBtn);
 
         p_itemPriceDeliveryDiv.append(p_itemPriceDiv, p_itemShippingInfoDiv, p_itemQtyCartDiv);
@@ -565,3 +569,55 @@ document.getElementById("p_resetButton").addEventListener("click", () =>{
 })
 
 // p_fruitsVegDB
+
+
+// Function To Add to cart and show Cart Items
+
+let bigBasketCart = JSON.parse(localStorage.getItem("bigBasketCart")) || [];
+
+function p_showCartNumber(data){
+    let cartCountDiv = document.getElementById("m_cartCount");
+    let totalItems = bigBasketCart.length;
+    
+    if(totalItems === 0){
+        cartCountDiv.textContent = `No items`
+    }
+    else if(totalItems === 1){
+        cartCountDiv.textContent = `1 item`
+    }
+    else if(totalItems >= 1){
+        cartCountDiv.textContent = `${bigBasketCart.length} items`
+    }
+    
+    // cartCountDiv.textContent = `${bigBasketCart.length} items`
+}
+
+p_showCartNumber(bigBasketCart);
+
+
+function p_addToCart(data, text_qty){
+    let new_cartObj = {};
+    let {prod_name, prod_brand, prod_price, prod_strike_price, prod_thumbnail} = data;
+    new_cartObj = {
+        prod_name, prod_brand, prod_price, prod_strike_price, prod_thumbnail,
+        prod_quantity : Number(text_qty.value)
+    }
+
+    if(bigBasketCart.length === 0)
+        bigBasketCart.push(new_cartObj);
+    else{
+        let check = false;
+        for(let item of bigBasketCart){
+            if(item.prod_name === new_cartObj.prod_name){
+                check = true;
+                if(item.prod_quantity <= 15)
+                    item.prod_quantity += Number(text_qty.value);
+            }
+        }
+        if(!check) bigBasketCart.push(new_cartObj);
+    }
+
+    // console.log(bigBasketCart);
+    localStorage.setItem("bigBasketCart", JSON.stringify(bigBasketCart));
+    p_showCartNumber(bigBasketCart);
+}

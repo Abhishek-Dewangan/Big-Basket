@@ -534,3 +534,10 @@ body{
         display: none;
     }
 }
+
+
+@media all and (min-width: 500px) and (max-width: 700px){
+    #p_productsDisplayGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
