@@ -4,12 +4,29 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 #header{
     /* border: 1px solid black; */
         width: 100%;
-        height: 120px;
+        height: 210px;
         margin: auto;
+        background-color: #fff;
 }
+
+.header-active{
+        /* height: 80px; */
+        position:fixed;
+        width: 100%;
+        top: 0px;
+        left:0px;
+        right:0px;
+        z-index: 3000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 #mupper{
     /* border: 1px solid black; */
         width: 80%;
@@ -34,6 +51,7 @@
 #mlogo{
         width: 20%;
         height: 100%; 
+        cursor: pointer;
     }
     #mlogoimg{
         width: 100%;
@@ -116,11 +134,18 @@
         outline: none;
     }
     .msearchbtn{
-        height: 38px;
+        height: 41px;
         padding: 9px;
         background-color: #a5cd39;
         border-style: none ;
         margin-left: -5px;
+        outline: none;
+        cursor: pointer;
+        /* border: 4px solid #a5cd39; */
+    }
+    .msearchbtn:focus{
+        outline: none;
+        border: 1px solid #a5cd39;
     }
     .miconsearch{
         color: white;
@@ -308,3 +333,46 @@ a.p_category{
     background-color: #fff;
 }
 
+
+
+/* Small Navbar */ 
+
+#small_navbar_container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+#small_navbar{
+    width: 80%;
+    margin: auto;
+    height: 80px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#small_logo{
+    width: 5%;
+    height: 100%;
+    padding: 10px;
+    /* border: 1px solid blue; */
+}
+
+#small_searchBar{
+    width: 60%;
+    /* border: 1px solid red; */
+}
+
+#small_searchBar > #msebar{
+    width: 100%;
+}
+
+#small_searchBar > #msebar .minputsearch, #small_searchBar > #msebar .msearchbtn {
+    margin-top: -20px;
+}

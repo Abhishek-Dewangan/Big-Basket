@@ -6,6 +6,11 @@ let response = await createHeader();
 
 header.innerHTML = response;
 
+let logo = document.getElementById("mlogo");
+logo.addEventListener("click", () => {
+    window.location.href = "index.html"; 
+})
+
 
 let all_category = document.querySelectorAll(".p_category");
 
@@ -147,4 +152,56 @@ p_dropdown.addEventListener("click", () => {
         p_categoryMegaContainer.style.display = "block";
     }
     // p_categoryMegaContainer.classList.toggle('.p_categoryBox-active');
+})
+
+
+
+// Function on scroll
+
+let upperNav = document.getElementById("mupper");
+let lowerNav = document.getElementById("p_categoryHeaders");
+let middleNav = document.getElementById("mmiddle");
+
+let bbLogoIcon = document.querySelector("#mlogoimg");
+
+let bbSmallIcon = "https://www.bbassets.com/static/v2531/custPage/build/content/img/bb-icon.png";
+let bbLargeIcon = "https://d3t4kadguw9jug.cloudfront.net/uploads/stores/big-basket-logopng-1562824429.png";
+
+
+// let smallNavbar = document.getElementById("small_navbar_container");
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 50){
+        upperNav.style.display = "none";
+        lowerNav.style.display = "none";
+        bbLogoIcon.src = bbSmallIcon;
+        bbLogoIcon.style.width = "50px";
+        bbLogoIcon.style.height = "50px";
+        // middleNav.style.marinTop = "-30px";
+        header.classList.add("header-active");
+        header.style.height = "80px"
+    }
+
+    if(window.scrollY === 0){
+        upperNav.style.display = "block";
+        lowerNav.style.display = "block";
+        bbLogoIcon.src = bbLargeIcon;
+        bbLogoIcon.style.width = "100%";
+        bbLogoIcon.style.height = "100%";
+        // middleNav.style.marinTop = "-30px";
+        header.style.height = "210px";
+        header.classList.remove("header-active");
+    }
+})
+
+
+
+// Function on click and close category dropdown
+
+window.addEventListener("click", (event) => {
+    if(p_categoryMegaContainer.style.display === "block"){
+        if(event.target !== p_categoryMegaContainer){
+            p_categoryMegaContainer.style.display = "none";
+        }
+    }
 })

@@ -65,10 +65,10 @@ const createHeader = async () => {
                     <div id="p_categoryContainer">
                         <div id="p_mainCategory">
                             <ul>
-                                <li> <a class="p_category" href="#" name="fruits">Fruits & Vegetables</a> </li>
-                                <li> <a class="p_category" href="#" name="foodgrains">Foodgrains, Oil & Masala</a> </li>
-                                <li> <a class="p_category" href="#" name="bakery">Bakery, Cakes & Dairy</a> </li>
-                                <li> <a class="p_category" href="#" name="eggs">Eggs, Meat & Fish</a> </li>
+                                <li> <a class="p_category" href="fruits_veg.html" name="fruits">Fruits & Vegetables</a> </li>
+                                <li> <a class="p_category" href="foodgrains.html" name="foodgrains">Foodgrains, Oil & Masala</a> </li>
+                                <li> <a class="p_category" href="bread_bakery.html" name="bakery">Bakery, Cakes & Dairy</a> </li>
+                                <li> <a class="p_category" href="eggs_meat.html" name="eggs">Eggs, Meat & Fish</a> </li>
                                 <li> <a class="p_category" href="#" name="beverages">Beverages</a> </li>
                                 <li> <a class="p_category" href="#" name="snacks">Snacks & Branded Foods</a> </li>
                                 <li> <a class="p_category" href="#" name="beauty">Beauty & Hygiene</a> </li>

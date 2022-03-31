@@ -179,6 +179,10 @@ const p_createItemsDiv = (container, data) => {
 
         p_itemAddCartBtn.innerHTML = `ADD ${p_basketIcon}`;
 
+        p_itemAddCartBtn.addEventListener("click", ()=>{
+            p_addToCart(el, p_itemQtyTextBox);
+        })
+
         p_itemQtyCartDiv.append(p_itemQtyTextBox, p_itemAddCartBtn);
 
         p_itemPriceDeliveryDiv.append(p_itemPriceDiv, p_itemShippingInfoDiv, p_itemQtyCartDiv);
@@ -200,6 +204,9 @@ const p_createItemsDiv = (container, data) => {
 }
 
 p_createItemsDiv(p_productsDisplayGrid, foodGrainsDB);
+
+
+
 
 function p_showTotalItems(items){
     let p_totalItems = document.getElementById("p_totalItems");
@@ -568,3 +575,11 @@ document.getElementById("p_resetButton").addEventListener("click", () =>{
     p_showTotalItems(foodGrainsDB);
 
 })
+
+
+
+/// Function Area To Add Item To Cart
+
+function p_addToCart(data, qty){
+    console.log(data, qty.value);
+}
