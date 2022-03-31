@@ -1,4 +1,5 @@
-let prodData = [
+let prodData = 
+[
     {
         "prod_name": "Onion",
         "prod_price": "100",
@@ -7,7 +8,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "3.7"
     },
     {
         "prod_name": "Coriander",
@@ -17,7 +19,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4"
     },
     {
         "prod_name": "Banana",
@@ -27,7 +30,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4"
     },
     {
         "prod_name": "Green Peas Fresh",
@@ -37,7 +41,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4.1"
     },
     {
         "prod_name": "Apple",
@@ -47,7 +52,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4.6"
     },
     {
         "prod_name": "Cucumber",
@@ -57,7 +63,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4.6"
     },
     {
         "prod_name": "Beetroot",
@@ -67,7 +74,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "3.8"
     },
     {
         "prod_name": "Orange",
@@ -77,7 +85,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "3.8"
     },
     {
         "prod_name": "Watermelon",
@@ -87,7 +96,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4.1"
     },
     {
         "prod_name": "Tomato",
@@ -97,7 +107,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "3.8"
     },
     {
         "prod_name": "Potato",
@@ -107,7 +118,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "3.7"
     },
     {
         "prod_name": "Cauliflower",
@@ -117,7 +129,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "3.7"
     },
     {
         "prod_name": "Ladis Finger",
@@ -127,7 +140,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4.3"
     },
     {
         "prod_name": "Graps",
@@ -137,7 +151,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "3.7"
     },
     {
         "prod_name": "Pomegranate",
@@ -147,7 +162,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4.6"
     },
     {
         "prod_name": "Bringel",
@@ -157,7 +173,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "3.7"
     },
     {
         "prod_name": "Ginger",
@@ -167,7 +184,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4.3"
     },
     {
         "prod_name": "Kiwi",
@@ -177,7 +195,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "fruits",
-        "prod_brand": "Fresho"
+        "prod_brand": "Fresho",
+        "prod_rating": "4.3"
     },
     {
         "prod_name": "Basmati Rice",
@@ -187,7 +206,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "foodgrains",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4.3"
     },
     {
         "prod_name": "Refind Sugar",
@@ -197,7 +217,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "foodgrains",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "3.8"
     },
     {
         "prod_name": "Toor Daal",
@@ -207,7 +228,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "foodgrains",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4.6"
     },
     {
         "prod_name": "Atta",
@@ -217,7 +239,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "foodgrains",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "3.8"
     },
     {
         "prod_name": "Olive Oil",
@@ -227,7 +250,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "oil",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4.1"
     },
     {
         "prod_name": "Sooji",
@@ -237,7 +261,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "foodgrains",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4.3"
     },
     {
         "prod_name": "Cow Ghee",
@@ -247,7 +272,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "oil",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4.3"
     },
     {
         "prod_name": "Cooking Oil",
@@ -257,7 +283,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "oil",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4.6"
     },
     {
         "prod_name": "Mastered Oil",
@@ -267,7 +294,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "oil",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4"
     },
     {
         "prod_name": "Sunflower Oil",
@@ -277,7 +305,8 @@ let prodData = [
         "prod_quantity": "1",
         "prod_price_unit": "kg",
         "prod_category": "oil",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4"
     },
     {
         "prod_name": "Garam Masala",
@@ -287,7 +316,8 @@ let prodData = [
         "prod_quantity": "250",
         "prod_price_unit": "gm",
         "prod_category": "mashala",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4.6"
     },
     {
         "prod_name": "Chicken Masala",
@@ -297,7 +327,8 @@ let prodData = [
         "prod_quantity": "250",
         "prod_price_unit": "gm",
         "prod_category": "mashala",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "4"
     },
     {
         "prod_name": "Kitchen King Masala",
@@ -307,7 +338,8 @@ let prodData = [
         "prod_quantity": "250",
         "prod_price_unit": "gm",
         "prod_category": "mashala",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "3.7"
     },
     {
         "prod_name": "Maggie Masala",
@@ -317,7 +349,8 @@ let prodData = [
         "prod_quantity": "250",
         "prod_price_unit": "gm",
         "prod_category": "mashala",
-        "prod_brand": "bbcombo"
+        "prod_brand": "bbcombo",
+        "prod_rating": "3.7"
     },
     {
         "prod_name": "Brown Bread",
@@ -327,7 +360,8 @@ let prodData = [
         "prod_quantity": "500",
         "prod_price_unit": "gm",
         "prod_category": "bakery",
-        "prod_brand": "Brotos"
+        "prod_brand": "Brotos",
+        "prod_rating": "4.3"
     },
     {
         "prod_name": "White Butter",
@@ -336,7 +370,8 @@ let prodData = [
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/s/30009708_2-parsi-dairy-farm-butter-white.jpg",
         "prod_price_unit": "gm",
         "prod_category": "bakery",
-        "prod_brand": null
+        "prod_brand": "Amul",
+        "prod_rating": "4"
     },
     {
         "prod_name": "Fresh Milk",
@@ -345,7 +380,8 @@ let prodData = [
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/s/40041431_1-amul-taaza-fresh-toned-milk.jpg",
         "prod_price_unit": "gm",
         "prod_category": "bakery",
-        "prod_brand": null
+        "prod_brand": "Amul",
+        "prod_rating": "4.3"
     },
     {
         "prod_name": "Dahi",
@@ -354,7 +390,8 @@ let prodData = [
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/s/1213630_1-amul-masti-dahi.jpg",
         "prod_price_unit": "gm",
         "prod_category": "bakery",
-        "prod_brand": null
+        "prod_brand": "Amul",
+        "prod_rating": "3.7"
     },
     {
         "prod_name": "Cookie",
@@ -363,7 +400,8 @@ let prodData = [
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/s/40250008_1-eighth-sin-cookie-bites-butter-soft-crisp-buttery-yummy-snack.jpg",
         "prod_price_unit": "gm",
         "prod_category": "bakery",
-        "prod_brand": null
+        "prod_brand": "Britannia",
+        "prod_rating": "4.6"
     },
     {
         "prod_name": "Fresh Cream",
@@ -372,7 +410,8 @@ let prodData = [
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/mm/40005030_2-amul-fresh-cream-25-milk-fat-low-fat.jpg",
         "prod_price_unit": "kg",
         "prod_category": "bakery",
-        "prod_brand": null
+        "prod_brand": "Amul",
+        "prod_rating": "3.8"
     },
     {
         "prod_name": "Fresho Apple-Red Delicious/Washington 4pcs+BB Home Vegetable & Fruit Wash 500ml",
@@ -381,7 +420,8 @@ let prodData = [
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/mm/1212557_1-bb-combo-fresho-apple-red-deliciouswashington-4pcsbb-home-vegetable-fruit-wash-500ml.jpg",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "BB Combo"
+        "prod_brand": "BB Combo",
+        "prod_rating": "4.6"
     },
     {
         "prod_name": "Fresho Bitter Gourd 500 g + BB Home Vegetable & Fruit Wash 500 ml",
@@ -390,7 +430,8 @@ let prodData = [
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/mm/1212556_1-bb-combo-fresho-bitter-gourd-500-g-bb-home-vegetable-fruit-wash-500-ml.jpg",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "BB Combo"
+        "prod_brand": "BB Combo",
+        "prod_rating": "3.8"
     },
     {
         "prod_name": "Fresho Lettuce - Iceberg 500 g + BB Home Vegetable & Fruit Wash 500 ml",
@@ -399,11 +440,12 @@ let prodData = [
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/mm/1212560_1-bb-combo-fresho-lettuce-iceberg-500-g-bb-home-vegetable-fruit-wash-500-ml.jpg",
         "prod_price_unit": "kg",
         "prod_category": "vegetables",
-        "prod_brand": "BB Combo"
-    },
-]
+        "prod_brand": "BB Combo",
+        "prod_rating": "4.1"
+    }
+];
+
+
+
 
 localStorage.setItem("product", JSON.stringify(prodData))
-
-let data = JSON.parse(localStorage.getItem("product"));
-console.log(data);

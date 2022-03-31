@@ -165,6 +165,27 @@ p_dropdown.addEventListener("click", () => {
 
 
 
+// Search Functionality
+
+let p_searchBox = document.querySelector(".minputsearch");
+
+p_searchBox.addEventListener("keypress", (event) => {
+    if(event.code === "Enter"){
+        localStorage.setItem("search_query", p_searchBox.value);
+        window.location.href = "search_results.html";
+    }
+})
+
+let p_searchBtn = document.querySelector(".msearchbtn");
+p_searchBtn.addEventListener("click", () => {
+    localStorage.setItem("search_query", p_searchBox.value);
+    window.location.href = "search_results.html";
+})
+
+
+
+
+
 // Function on scroll
 
 let upperNav = document.getElementById("mupper");
