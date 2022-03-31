@@ -334,45 +334,109 @@ a.p_category{
 }
 
 
-
-/* Small Navbar */ 
-
-#small_navbar_container{
+/* Hiding Small Mobile Navbar */
+#mediaHeader{
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
 }
 
 
-#small_navbar{
-    width: 80%;
-    margin: auto;
-    height: 80px;
-    background-color: pink;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-#small_logo{
-    width: 5%;
-    height: 100%;
-    padding: 10px;
-    /* border: 1px solid blue; */
-}
+@media all and (max-width: 700px){
+    #header{
+        display: none;
+    }
 
-#small_searchBar{
-    width: 60%;
-    /* border: 1px solid red; */
-}
+    #mediaHeader{
+        display: block;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 5000;
+    }
 
-#small_searchBar > #msebar{
-    width: 100%;
-}
-
-#small_searchBar > #msebar .minputsearch, #small_searchBar > #msebar .msearchbtn {
-    margin-top: -20px;
+    #mobileHeader{
+        width: 100vw;
+        background-color: #84c225;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* #mobileHeader > div{
+        border: 1px solid blue;
+    } */
+    
+    #mobileNavigation{
+        height:50%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .mobileNavIcon{
+        display: flex;
+        align-items: center;
+    }
+    
+    .mobileNavIcon i{
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    .mobileNavIcon img{
+        width: 25px;
+        height: 25px;
+    }
+    
+    #mobileSearch{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #mobileSearchbox{
+        width: 98%;
+        height: 30px;
+        padding: 5px;
+        margin-left: 2px;
+        font-size: 14px;
+    }
+    
+    #mobileSearch > i{
+        font-size: 18px;
+        padding: 5px;
+        margin-left: -40px;
+    }
+    
+    .mobileLinksDiv{
+        position: fixed;
+        top: 80px;
+        left: 0px;
+        right: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: whitesmoke;
+        z-index: 1000;
+        display: none;
+    }
+    
+    .mobileLinks > li{
+        width: 100%;
+        padding: 5px;
+        padding-left: 15px;
+        border-bottom: 1px solid lightgray;
+    }
+    
+    .mobileLinks > li > a{
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .mobileLinksDiv-active{
+        display: block;
+    }
 }

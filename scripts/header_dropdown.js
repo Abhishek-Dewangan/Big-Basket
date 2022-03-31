@@ -1,10 +1,19 @@
-import createHeader from "../components/header.js";
+import { createHeader, createMobileHeader } from "../components/header.js";
 
+// Creating Header Navbar
 let header = document.getElementById("header");
 
 let response = await createHeader();
 
 header.innerHTML = response;
+
+// Creating Mobile Header Navbar
+
+let mediaHeader = document.getElementById("mediaHeader");
+
+let mobile_res = await createMobileHeader();
+
+mediaHeader.innerHTML = mobile_res;
 
 let logo = document.getElementById("mlogo");
 logo.addEventListener("click", () => {
@@ -171,27 +180,31 @@ let bbLargeIcon = "https://d3t4kadguw9jug.cloudfront.net/uploads/stores/big-bask
 // let smallNavbar = document.getElementById("small_navbar_container");
 
 window.addEventListener("scroll", () => {
-    if(window.scrollY > 50){
-        upperNav.style.display = "none";
-        lowerNav.style.display = "none";
-        bbLogoIcon.src = bbSmallIcon;
-        bbLogoIcon.style.width = "50px";
-        bbLogoIcon.style.height = "50px";
-        // middleNav.style.marinTop = "-30px";
-        header.classList.add("header-active");
-        header.style.height = "80px"
+    // Check for css media queries
+    if(window.innerWidth >= 700){
+        if(window.scrollY > 50){
+            upperNav.style.display = "none";
+            lowerNav.style.display = "none";
+            bbLogoIcon.src = bbSmallIcon;
+            bbLogoIcon.style.width = "50px";
+            bbLogoIcon.style.height = "50px";
+            // middleNav.style.marinTop = "-30px";
+            header.classList.add("header-active");
+            header.style.height = "80px"
+        }
+    
+        if(window.scrollY === 0){
+            upperNav.style.display = "block";
+            lowerNav.style.display = "block";
+            bbLogoIcon.src = bbLargeIcon;
+            bbLogoIcon.style.width = "100%";
+            bbLogoIcon.style.height = "100%";
+            // middleNav.style.marinTop = "-30px";
+            header.style.height = "210px";
+            header.classList.remove("header-active");
+        }
     }
-
-    if(window.scrollY === 0){
-        upperNav.style.display = "block";
-        lowerNav.style.display = "block";
-        bbLogoIcon.src = bbLargeIcon;
-        bbLogoIcon.style.width = "100%";
-        bbLogoIcon.style.height = "100%";
-        // middleNav.style.marinTop = "-30px";
-        header.style.height = "210px";
-        header.classList.remove("header-active");
-    }
+   
 })
 
 
@@ -204,4 +217,15 @@ window.addEventListener("click", (event) => {
             p_categoryMegaContainer.style.display = "none";
         }
     }
+})
+
+
+
+// Toggle On Mobile Menu
+
+let menuBtn = document.querySelector("#mobileMenuIcon");
+let menuList = document.querySelector(".mobileLinksDiv");
+
+menuBtn.addEventListener("click", () => {
+    menuList.classList.toggle('mobileLinksDiv-active');
 })

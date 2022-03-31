@@ -580,6 +580,26 @@ document.getElementById("p_resetButton").addEventListener("click", () =>{
 
 /// Function Area To Add Item To Cart
 
+/*
+{
+    "prod_name": "Fortune Premium Kachi Ghani Pure Mustard Oil",
+    "prod_price": "212",
+    "prod_strike_price": "0",
+    "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/s/276756_8-fortune-fortune-premium-kachi-ghani-pure-mustard-oil.jpg",
+    "prod_price_unit": "litre",
+    "prod_piece_unit": "",
+    "prod_brand": "Fortune",
+    "prod_rating": "4.1",
+    "prod_type": "veg"
+} */
+
+
 function p_addToCart(data, qty){
-    console.log(data, qty.value);
+    let new_cartObj = {};
+    let {prod_name: pname, prod_brand: pbrand} = data;
+    new_cartObj.prod_name = pname;
+    new_cartObj.prod_brand = pbrand;
+    new_cartObj.prod_quantity = Number(qty.value);
+
+    console.log(new_cartObj);
 }

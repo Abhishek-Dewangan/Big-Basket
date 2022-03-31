@@ -442,3 +442,91 @@ body{
 .p_itemMasterDiv:first-child > .p_itemNameDiv, .p_itemMasterDiv:first-child > .p_itemBrandNameDiv{
     padding-left: 30px;
 }
+
+
+
+
+
+
+
+/* CSS MEDIA QUERIES */
+
+@media all and (max-width: 700px){
+
+    #header{
+        display: none;
+    }
+
+    .carousel-indicators li{
+        display: none;
+    }
+
+    #p_storeEntry{
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #p_offerSlider{
+        width: 95%;
+    }
+
+    #p_bankOffersSection{
+        width: 95%;
+    }
+
+    #p_bankOffersDiv{
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+
+    .p_itemsContainer{
+        width: 95%;
+    }
+
+    .p_offerPopularClass{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #p_dailyStaplesDiv, #p_homeKitchensDiv, #p_brandStoreDiv{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .p_fruitVegDivClass{
+        width: 95%;
+        margin: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "a a"
+        "b c" 
+        "d e";
+    }
+
+    .p_foodItemDiv img{
+        width: 100%;
+    }
+
+    .p_productAdvtSlider{
+        width: 95%;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #p_companyText{
+        width: 95%;
+        margin: auto;
+    }
+
+    #p_bestSellersContainer{
+        width: 90%;
+    }
+
+    #p_bestSellersDiv{
+        /* display: grid; */
+        grid-template-columns: 1fr;
+    }
+
+    .p_itemMasterDiv:not(:first-child){
+        display: none;
+    }
+}

@@ -87,4 +87,57 @@ const createHeader = async () => {
                 </div>`
 }
 
-export default createHeader;
+
+
+const createMobileHeader = async () => {
+    return `<div id="mobileHeader">
+            <div id="mobileNavigation">
+                <div id="mobileMenuIcon" class="mobileNavIcon">
+                    <a href="#">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+                <div class="mobileNavIcon">
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </div>
+                <div class="mobileNavIcon">
+                    <a href="index.html">
+                        <img src="https://www.bbassets.com/static/v2531/custPage/build/content/img/bb-icon.png" alt="">
+                    </a>
+                </div>
+                <div class="mobileNavIcon">
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                </div>
+                <div class="mobileNavIcon">
+                    <a href="#">
+                        <i class="fa-solid fa-cart-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="mobileSearch">
+                <input type="text" id="mobileSearchbox" placeholder="Search Products..">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="mobileLinksDiv">
+                <ul class="mobileLinks">
+                    <li><a href="fruits_veg.html">Fruits & Vegetables</a></li>
+                    <li><a href="foodgrains.html">Foodgrains, Oil & Masala</a></li>
+                    <li><a href="bread_bakery.html">Bakery, Cakes & Dairy</a></li>
+                    <li><a href="eggs_meat.html">Eggs, Meat & Fish</a></li>
+                    <li><a href="#">Beverages</a></li>
+                    <li><a href="#">Snacks & Branded Foods</a></li>
+                    <li><a href="#">Beauty & Hygiene</a></li>
+                    <li><a href="#">Cleaning & HouseHold</a></li>
+                    <li><a href="#">Kitchen,Garden & Pets</a></li>
+                    <li><a href="#">Gourmet & World Foods</a></li>
+                    <li><a href="#">Baby Care</a></li>
+                </ul>
+            </div>
+        </div>`
+}
+
+export { createHeader, createMobileHeader };
