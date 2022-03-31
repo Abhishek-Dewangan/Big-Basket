@@ -14,7 +14,7 @@ $('.carousel').carousel({
 
 // Function to create Items Div
 
-let eggMeatFishDB = JSON.parse(localStorage.getItem("eggMeatFishDB")) || [];
+let breadBakeryDB = JSON.parse(localStorage.getItem("breadBakeryDB")) || [];
 
 // console.log(foodGrainsDB);
 
@@ -216,14 +216,14 @@ const p_createItemsDiv = (container, data) => {
     })
 }
 
-p_createItemsDiv(p_productsDisplayGrid, eggMeatFishDB);
+p_createItemsDiv(p_productsDisplayGrid, breadBakeryDB);
 
 function p_showTotalItems(items){
     let p_totalItems = document.getElementById("p_totalItems");
     p_totalItems.textContent = `(${items.length})`;
 }
 
-p_showTotalItems(eggMeatFishDB);
+p_showTotalItems(breadBakeryDB);
 
 // Utility Area to Create Sort Function and display sorted data
 let p_sorter = document.getElementById("p_foodgrainSorter");
@@ -233,7 +233,7 @@ p_sorter.addEventListener("change", () => {
 
 
 const p_sortData = (sortValue) => {
-    let tempFoodDB = eggMeatFishDB.slice();
+    let tempFoodDB = breadBakeryDB.slice();
     if(sortValue !== "--"){
         if(sortValue === "p_pop"){
             // sort by ratings
@@ -291,7 +291,7 @@ const p_sortData = (sortValue) => {
 
 let p_prodBrandList = {};
 
-eggMeatFishDB.forEach((el) => {
+breadBakeryDB.forEach((el) => {
     p_prodBrandList[el.prod_brand] = 1;
 })
 
@@ -302,7 +302,7 @@ p_prodBrandList = Object.keys(p_prodBrandList);
 let p_brandFilters = [];
 
 const p_filterByBrandFunction = (filters) => {
-    let p_filteredFoodGrains = eggMeatFishDB.slice();
+    let p_filteredFoodGrains = breadBakeryDB.slice();
 
     p_filteredFoodGrains = p_filteredFoodGrains.filter((el) => {
         if(filters.includes(el.prod_brand)){
@@ -312,7 +312,7 @@ const p_filterByBrandFunction = (filters) => {
 
     // console.log("Filtered", p_filteredFoodGrains);
     if(p_filteredFoodGrains.length === 0){
-        p_filteredFoodGrains = eggMeatFishDB.slice();
+        p_filteredFoodGrains = breadBakeryDB.slice();
     }
 
     p_createItemsDiv(p_productsDisplayGrid, p_filteredFoodGrains);
@@ -358,7 +358,7 @@ const p_filterByPriceFunction = (filters) => {
     let p_filteredItems = [];
 
     if(filters.includes("Less Than Rs. 100")){
-        eggMeatFishDB.forEach((el) => {
+        breadBakeryDB.forEach((el) => {
             if(el.prod_price <= 100){
                 p_filteredItems.push(el);
             }
@@ -366,7 +366,7 @@ const p_filterByPriceFunction = (filters) => {
     }
 
     if(filters.includes("Rs. 100 - Rs. 500")){
-        eggMeatFishDB.forEach((el) => {
+        breadBakeryDB.forEach((el) => {
             if(el.prod_price > 100 && el.prod_price <= 500){
                 p_filteredItems.push(el);
             }
@@ -374,7 +374,7 @@ const p_filterByPriceFunction = (filters) => {
     }
 
     if(filters.includes("More Than Rs. 500")){
-        eggMeatFishDB.forEach((el) => {
+        breadBakeryDB.forEach((el) => {
             if(el.prod_price > 500){
                 p_filteredItems.push(el);
             }
@@ -382,7 +382,7 @@ const p_filterByPriceFunction = (filters) => {
     }
 
     if(filters.length === 0){
-        p_filteredItems = eggMeatFishDB.slice();
+        p_filteredItems = breadBakeryDB.slice();
     }
 
     p_createItemsDiv(p_productsDisplayGrid,  p_filteredItems);
@@ -400,7 +400,7 @@ let p_discountFilters = [];
 const p_filterByDiscountFunction = (filters) => {
     let p_filterDiscountedData = [];
     // console.log(filters);
-    let tempDB = eggMeatFishDB.slice();
+    let tempDB = breadBakeryDB.slice();
 
     // "Upto 10%", "10% - 25%", "More Than 25%"
 
@@ -558,9 +558,9 @@ document.getElementById("p_resetButton").addEventListener("click", () =>{
         checkboxes[i].checked = false;
     }
 
-    p_createItemsDiv(p_productsDisplayGrid,  eggMeatFishDB);
+    p_createItemsDiv(p_productsDisplayGrid,  breadBakeryDB);
 
-    p_showTotalItems(eggMeatFishDB);
+    p_showTotalItems(breadBakeryDB);
 
 })
 
