@@ -340,6 +340,19 @@ a.p_category{
 }
 
 
+#mbasketdiv{
+    position: relative;
+}
+
+#sbaskMain{
+    position: absolute;
+    z-index: 4000;
+    top: 18%;
+    left: 53.2%;
+    display: none;
+}
+
+
 
 @media all and (max-width: 700px){
     #header{
