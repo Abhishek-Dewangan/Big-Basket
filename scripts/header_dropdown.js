@@ -20,11 +20,16 @@ logo.addEventListener("click", () => {
     window.location.href = "index.html"; 
 })
 
+let loginIcon = document.getElementById("mlogin");
+loginIcon.addEventListener("click", () => {
+    window.location.href = "login.html";
+})
+
 
 let all_category = document.querySelectorAll(".p_category");
 
 for(let i=0; i<all_category.length; i++){
-    all_category[i].addEventListener("mouseover", (event) =>{
+    all_category[i].addEventListener("mouseenter", (event) =>{
         // console.log(event.target.name);
         createSubMenu(event.target.name);
     })
@@ -153,6 +158,21 @@ p_dropdown.addEventListener("mouseenter", () => {
     p_categoryMegaContainer.style.display = "block";
 })
 
+p_dropdown.addEventListener("mouseleave", () => {
+    p_categoryMegaContainer.style.display = "none";
+})
+
+p_categoryMegaContainer.addEventListener("mouseenter", () => {
+    p_categoryMegaContainer.style.display = "block";
+})
+
+p_categoryMegaContainer.addEventListener("mouseleave", () => {
+    p_categoryMegaContainer.style.display = "none";
+})
+
+
+
+
 // let p_dropdownIcon = document.getElementById("p_dropdownIcon")
 
 p_dropdown.addEventListener("click", () => {
@@ -214,6 +234,8 @@ let bbSmallIcon = "https://www.bbassets.com/static/v2531/custPage/build/content/
 let bbLargeIcon = "https://d3t4kadguw9jug.cloudfront.net/uploads/stores/big-basket-logopng-1562824429.png";
 
 let basketContainer = document.getElementById("sbaskMain");
+
+let searchDiv = document.querySelector(".mtopmerg");
 // let smallNavbar = document.getElementById("small_navbar_container");
 
 window.addEventListener("scroll", () => {
@@ -229,6 +251,7 @@ window.addEventListener("scroll", () => {
             header.classList.add("header-active");
             header.style.height = "80px";
             basketContainer.style.top = "10%";
+            searchDiv.style.marginTop = "5px";
             // basketContainer.classList.add(".scroll-active");
         }
     
@@ -310,14 +333,16 @@ checkoutBtn.addEventListener("click", () => {
 
 // Adding functionality to change login user name
 
-let activeUser = {
-    loginStatus : false,
-    userName : "Abinash",
-}
+// let activeUser = {
+//     loginStatus : false,
+//     userName : "Abinash",
+// }
 
-localStorage.setItem("loginUser", JSON.stringify(activeUser));
+let user = JSON.parse(localStorage.getItem("loginUser")) || {};
 
-let user = JSON.parse(localStorage.getItem("loginUser"));
+// localStorage.setItem("loginUser", JSON.stringify(activeUser));
+
+// let user = JSON.parse(localStorage.getItem("loginUser"));
 
 if(user.loginStatus){
     document.getElementById("mlogin").textContent = `Welcome, ${user.userName}!`
