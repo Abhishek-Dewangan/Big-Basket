@@ -115,6 +115,8 @@ let submenu2 = document.querySelector("#p_subCategory2");
 let submenu3 = document.querySelector("#p_subCategory3");
 let submenu4 = document.querySelector("#p_subCategory4");
 
+createSubMenu("fruits");
+
 function createSubMenu(category){
     if(sub_Menu_List[category] !== undefined){
 
