@@ -7,7 +7,7 @@ let prodData =
         "prod_thumbnail": "https://www.bigbasket.com/media/uploads/p/s/40050957_2-fresho-onion-organically-grown.jpg",
         "prod_quantity": "1",
         "prod_price_unit": "kg",
-        "prod_category": "fruits",
+        "prod_category": "vegetables",
         "prod_brand": "Fresho",
         "prod_rating": "3.7"
     },

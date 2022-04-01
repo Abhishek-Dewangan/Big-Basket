@@ -10,38 +10,34 @@ footer.innerHTML = createFooter()
 
 
 
-// let data = JSON.parse(localStorage.getItem('product'));
-// console.log(data);
-// let input = document.getElementById('asearchbar');
-// input.addEventListener('keypress', (event) => {
-//   //   event.preventDefault();
-//   search(event);
-// });
-// console.log(data[0].prod_category);
-// const search = (e) => {
-//   if (e.code == 'Enter') {
-//     let search = input.value;
-//     // console.log(search);
-//     let abhi = data.filter((el) => {
-//       return (
-//         el.prod_category.toLowerCase() == search.toLowerCase() ||
-//         el.prod_name.toLowerCase() == search.toLowerCase() ||
-//         el.prod_brand.toLowerCase() == search.toLowerCase()
-//       );
-//     });
-//     console.log(abhi);
-//   }
-// };
+let data = JSON.parse(localStorage.getItem('product'));
 
+
+let search_query = localStorage.getItem("search_query");
+
+let searchResultsDB = [];
+
+const search = (query) => {
+    searchResultsDB = data.filter((el) => {
+      return (
+        el.prod_category.toLowerCase().includes(query.toLowerCase()) ||
+        el.prod_name.toLowerCase() == query.toLowerCase() ||
+        el.prod_brand.toLowerCase().includes(query.toLowerCase())
+      );
+    });
+    // console.log("search Results", abhi);
+};
+
+search(search_query);
 
 
 
 
 // Function to create Items Div
 
-let foodGrainsDB = JSON.parse(localStorage.getItem("foodGrainsDB")) || [];
+// let foodGrainsDB = JSON.parse(localStorage.getItem("foodGrainsDB")) || [];
 
-console.log(foodGrainsDB);
+// console.log(foodGrainsDB);
 
 let p_productsDisplayGrid = document.getElementById("p_productsDisplayGrid");
 
@@ -228,17 +224,17 @@ const p_createItemsDiv = (container, data) => {
     })
 }
 
-p_createItemsDiv(p_productsDisplayGrid, foodGrainsDB);
+p_createItemsDiv(p_productsDisplayGrid, searchResultsDB);
 
 
 
 
 function p_showTotalItems(items){
     let p_totalItems = document.getElementById("p_totalItems");
-    p_totalItems.textContent = `(${items.length})`;
+    p_totalItems.textContent = `Search results for '${search_query}' (${items.length})`;
 }
 
-p_showTotalItems(foodGrainsDB);
+p_showTotalItems(searchResultsDB);
 
 // Utility Area to Create Sort Function and display sorted data
 let p_sorter = document.getElementById("p_foodgrainSorter");
@@ -248,7 +244,7 @@ p_sorter.addEventListener("change", () => {
 
 
 const p_sortData = (sortValue) => {
-    let tempFoodDB = foodGrainsDB.slice();
+    let tempFoodDB = searchResultsDB.slice();
     if(sortValue !== "--"){
         if(sortValue === "p_pop"){
             // sort by ratings
@@ -306,7 +302,7 @@ const p_sortData = (sortValue) => {
 
 let p_prodBrandList = {};
 
-foodGrainsDB.forEach((el) => {
+searchResultsDB.forEach((el) => {
     p_prodBrandList[el.prod_brand] = 1;
 })
 
@@ -317,7 +313,7 @@ p_prodBrandList = Object.keys(p_prodBrandList);
 let p_brandFilters = [];
 
 const p_filterByBrandFunction = (filters) => {
-    let p_filteredFoodGrains = foodGrainsDB.slice();
+    let p_filteredFoodGrains = searchResultsDB.slice();
 
     p_filteredFoodGrains = p_filteredFoodGrains.filter((el) => {
         if(filters.includes(el.prod_brand)){
@@ -327,7 +323,7 @@ const p_filterByBrandFunction = (filters) => {
 
     // console.log("Filtered", p_filteredFoodGrains);
     if(p_filteredFoodGrains.length === 0){
-        p_filteredFoodGrains = foodGrainsDB.slice();
+        p_filteredFoodGrains = searchResultsDB.slice();
     }
 
     p_createItemsDiv(p_productsDisplayGrid, p_filteredFoodGrains);
@@ -342,16 +338,16 @@ let p_foodPrefFilters = [];
 
 
 const p_filterByFoodPreferencesFunction = (data) => {
-    let p_filterData = foodGrainsDB.slice();
+    let p_filterData = searchResultsDB.slice();
     // console.log("filters", data);
-    p_filterData = foodGrainsDB.filter((el) => {
+    p_filterData = searchResultsDB.filter((el) => {
         if(data.includes(el.prod_type)){
             return el;
         }
     })
 
     if(data.length === 0){
-        p_filterData = foodGrainsDB.slice();
+        p_filterData = searchResultsDB.slice();
     }
 
     // console.log(p_filterData);
@@ -373,7 +369,7 @@ const p_filterByPriceFunction = (filters) => {
     let p_filteredItems = [];
 
     if(filters.includes("Less Than Rs. 100")){
-        foodGrainsDB.forEach((el) => {
+        searchResultsDB.forEach((el) => {
             if(el.prod_price <= 100){
                 p_filteredItems.push(el);
             }
@@ -381,7 +377,7 @@ const p_filterByPriceFunction = (filters) => {
     }
 
     if(filters.includes("Rs. 100 - Rs. 500")){
-        foodGrainsDB.forEach((el) => {
+        searchResultsDB.forEach((el) => {
             if(el.prod_price > 100 && el.prod_price <= 500){
                 p_filteredItems.push(el);
             }
@@ -389,7 +385,7 @@ const p_filterByPriceFunction = (filters) => {
     }
 
     if(filters.includes("More Than Rs. 500")){
-        foodGrainsDB.forEach((el) => {
+        searchResultsDB.forEach((el) => {
             if(el.prod_price > 500){
                 p_filteredItems.push(el);
             }
@@ -397,7 +393,7 @@ const p_filterByPriceFunction = (filters) => {
     }
 
     if(filters.length === 0){
-        p_filteredItems = foodGrainsDB.slice();
+        p_filteredItems = searchResultsDB.slice();
     }
 
     p_createItemsDiv(p_productsDisplayGrid,  p_filteredItems);
@@ -415,7 +411,7 @@ let p_discountFilters = [];
 const p_filterByDiscountFunction = (filters) => {
     let p_filterDiscountedData = [];
     console.log(filters);
-    let tempDB = foodGrainsDB.slice();
+    let tempDB = searchResultsDB.slice();
 
     // "Upto 10%", "10% - 25%", "More Than 25%"
 

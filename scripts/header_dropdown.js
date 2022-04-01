@@ -182,6 +182,20 @@ p_searchBtn.addEventListener("click", () => {
     window.location.href = "search_results.html";
 })
 
+// Function to search if mobile navbar is on
+
+let smallSearchBox = document.getElementById("mobileSearchbox");
+
+smallSearchBox.addEventListener("keypress", (event) => {
+    if(event.code === "Enter"){
+        let searchQuery = smallSearchBox.value;
+        localStorage.setItem("search_query", searchQuery);
+        window.location.href = "search_results.html";
+    }
+})
+
+
+
 
 
 
@@ -250,3 +264,20 @@ let menuList = document.querySelector(".mobileLinksDiv");
 menuBtn.addEventListener("click", () => {
     menuList.classList.toggle('mobileLinksDiv-active');
 })
+
+
+
+// Adding functionality to change login user name
+
+let activeUser = {
+    loginStatus : false,
+    userName : "Abinash",
+}
+
+localStorage.setItem("loginUser", JSON.stringify(activeUser));
+
+let user = JSON.parse(localStorage.getItem("loginUser"));
+
+if(user.loginStatus){
+    document.getElementById("mlogin").textContent = `Welcome, ${user.userName}!`
+}
