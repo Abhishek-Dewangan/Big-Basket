@@ -615,4 +615,5 @@ function p_addToCart(data, text_qty){
     // console.log(bigBasketCart);
     localStorage.setItem("bigBasketCart", JSON.stringify(bigBasketCart));
     p_showCartNumber(bigBasketCart);
+    window.location.reload(true);
 }

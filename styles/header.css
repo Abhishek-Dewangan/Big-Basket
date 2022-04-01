@@ -339,17 +339,32 @@ a.p_category{
     display: none;
 }
 
-
-#mbasketdiv{
+/* #mbasketdiv{
     position: relative;
-}
+} */
 
-#sbaskMain{
+.bask-scroll-top{
     position: absolute;
     z-index: 4000;
     top: 18%;
     left: 53.2%;
+    display: block;
+}
+
+#sbaskMain{
+    position: fixed;
+    z-index: 7000;
+    left: 53.2%;
+    top: 18%;
     display: none;
+}
+
+.scroll-stop{
+    top: 18%;
+}
+
+.scroll-active{
+    top: 10%;
 }
 
 

@@ -82,6 +82,7 @@ const displayBaskItems = (event)=>{
 
             p_reduceQuantity(index, baskPrice, baskSaved);
             baskQty.innerText = Number(baskQty.innerText) - 1;
+            reqPqty.textContent = Number(reqPqty.textContent) - 1;
             // if(baskQty.innerText ==1){
             //     baskArr.splice(baskArr.indexOf(elem),1);
             //     localStorage.setItem("sbaskTotalPrice",Number(total))
@@ -118,6 +119,7 @@ const displayBaskItems = (event)=>{
 
             p_increaseQuantity(index, baskPrice, baskSaved);
             baskQty.innerText = Number(baskQty.innerText) + 1;
+            reqPqty.textContent = Number(reqPqty.textContent) + 1;
 
             // elem.prod_quantity = parseInt(elem.prod_quantity) + 1
             
@@ -194,7 +196,7 @@ document.querySelector("#sCheckoutBtn").addEventListener("click",()=>{
 
 
 
-/// My Part Starts 
+/// Quantity Increase/Decrease Functionality Starts 
 
 function p_reduceQuantity(index, baskPrice, baskSaved){
     let item = baskArr[index];
@@ -206,7 +208,7 @@ function p_reduceQuantity(index, baskPrice, baskSaved){
     else{
         item.prod_quantity -= 1;
         baskPrice.textContent = `Rs. ${item.prod_price * item.prod_quantity}`;
-        baskSaved.textContent = `Saved Rs. ${((item.prod_strike_price - item.prod_price) * item.prod_quantity).toFixed(2)}`;
+        // baskSaved.textContent = `Saved Rs. ${((item.prod_strike_price - item.prod_price) * item.prod_quantity).toFixed(2)}`;
     }
 
     p_calculateTotalPrice();
@@ -221,7 +223,12 @@ function p_increaseQuantity(index, baskPrice, baskSaved){
     item.prod_quantity += 1;
 
     baskPrice.textContent = `Rs. ${item.prod_price * item.prod_quantity}`;
-    baskSaved.textContent = `Saved Rs. ${((item.prod_strike_price - item.prod_price) * item.prod_quantity).toFixed(2)}`;
+
+    if(item.prod_strike_price == 0){
+        baskSaved.textContent = `Saved Rs. 0`;
+    }
+    else
+        baskSaved.textContent = `Saved Rs. ${((item.prod_strike_price - item.prod_price) * item.prod_quantity).toFixed(2)}`;
 
 
 

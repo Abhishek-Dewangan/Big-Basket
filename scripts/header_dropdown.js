@@ -213,13 +213,13 @@ let bbLogoIcon = document.querySelector("#mlogoimg");
 let bbSmallIcon = "https://www.bbassets.com/static/v2531/custPage/build/content/img/bb-icon.png";
 let bbLargeIcon = "https://d3t4kadguw9jug.cloudfront.net/uploads/stores/big-basket-logopng-1562824429.png";
 
-
+let basketContainer = document.getElementById("sbaskMain");
 // let smallNavbar = document.getElementById("small_navbar_container");
 
 window.addEventListener("scroll", () => {
     // Check for css media queries
     if(window.innerWidth >= 700){
-        if(window.scrollY > 50){
+        if(window.scrollY > 0){
             upperNav.style.display = "none";
             lowerNav.style.display = "none";
             bbLogoIcon.src = bbSmallIcon;
@@ -227,7 +227,9 @@ window.addEventListener("scroll", () => {
             bbLogoIcon.style.height = "50px";
             // middleNav.style.marinTop = "-30px";
             header.classList.add("header-active");
-            header.style.height = "80px"
+            header.style.height = "80px";
+            basketContainer.style.top = "10%";
+            // basketContainer.classList.add(".scroll-active");
         }
     
         if(window.scrollY === 0){
@@ -239,6 +241,7 @@ window.addEventListener("scroll", () => {
             // middleNav.style.marinTop = "-30px";
             header.style.height = "210px";
             header.classList.remove("header-active");
+            basketContainer.style.top = "18%";
         }
     }
    
