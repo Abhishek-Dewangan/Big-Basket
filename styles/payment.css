@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: whitesmoke;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+#p_smallHeader{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a5cd39;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top:0px;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+/* body {
+  margin: 20px 100px 100px;
+} */
+
+#a_left p {
+  color: rgb(105, 105, 105);
+}
+#a_navbar {
+  /* margin: 20px 50px; */
+  display: flex;
+  justify-content: space-between;
+}
+#a_personal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+}
+#a_address {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+}
+#a_select {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+}
+#a_body {
+  display: flex;
+  gap: 30px;
+  width: 80%;
+  margin: auto;
+  margin-top: 120px;
+}
+#a_left {
+  width: 1000px;
+  border: 1px solid rgb(194, 194, 194);
+  padding: 10px;
+  background-color: rgb(228, 228, 228);
+}
+#a_right {
+  width: 500px;
+  border: 1px solid rgb(194, 194, 194);
+  padding: 10px;
+  background-color: rgb(228, 228, 228);
+}
+#ap_right{
+  /* border: 1px solid rgb(194, 194, 194); */
+  padding: 10px;
+  background-color: rgb(228, 228, 228);
+}
+#a_payment {
+  display: flex;
+  gap: 50px;
+}
+#ap_left {
+  display: flex;
+  flex-direction: column;
+}
+#ap_left > button {
+  font-size: 18px;
+  padding: 8px;
+  color: gray;
+  font-family: 'Montserrat', sans-serif;
+}
+#a_credit:focus {
+  color: black;
+  background-color: white;
+}
+#a_cvv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+}
+#a_pay {
+  padding: 5px;
+  width: 400px;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+#aOrderSummary{
+  margin: auto;
+  padding: 10px;
+  width: 85%;
+  border: 1px solid gray;
+  /* margin-left: 0px; */
+}
+#aTop{
+  margin-bottom: 50px;
+}
+#aOrderSummary p,h3{
+  margin: 10px;
+}
+#aOrderSummary p{
+  font-size: 16px;
+}
+#aOrderSummary h3{
+  font-size: 16px;
+}
+#aOrderSummary p{
+  color: rgb(61, 61, 61);
+}
+.aSummary{
+  display: flex;
+  justify-content: space-between;
+}
+.aPrice{
+  display: flex;
+  gap: 5px;
+}
+
+#ap_main{
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#a_pay{
+  width: 100%;
+  margin-left: 35px;
+  margin: auto;
+  background-color: rgb(176, 233, 130);
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+#a_pay:hover{
+  background-color: rgb(145, 218, 37);
+}
+#a_cardNumber{
+  width: 100%;
+  margin: auto;
+  margin-left: 10px;
+  margin: auto;
+}
+.aInput {
+  padding: 7px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 3px;
+}
+.aInput:focus{
+  outline: 2px solid rgb(145, 218, 37);
+}
+#ap_main > h3 {
+  margin: 5px;
+}
+#ap_right > h3,p {
+  margin: 10px;
+}
+#ap_right{
+  width: 510px;
+}
+
+#aAddCancel > button{
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.aSelect{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#a_personal > p, #a_address > p, #a_select > p{
+  margin-left: 0px;
+}
+
+#a_left h3{
+  margin-left: 0px;
+}
+
+#a_right > h3{
+  text-align: center;
+}
+
+
+
+
+#aAddCancel > button {
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+#aAddCancel > button:first-child {
+  background-color: rgb(134, 134, 134);
+}
+#aAddCancel > button:first-child:hover{
+  color: white;
+}
+.aSelect {
+  padding: 5px;
+  font-size: large;
+}
+#aVoucher{
+  width: 70%;
+  margin-left: 25px;
+  font-family: 'Montserrat', sans-serif;
+}
+#aApply,#aVoucher{
+  height: 30px;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+#aApply:hover{
+  background-color: rgb(144, 204, 95);
+}
+
+#aVoucher{
+  padding: 5px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 3px;
+}
+
+#aVoucher:focus{
+  outline: 2px solid rgb(145, 218, 37);
+} 
+
+#aApply{
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  outline: 1px solid black;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+
+#aSavingsDiv{
+  background-color: #bfe08e;
+  color: #000;
+  font-weight: bold;
+}
+
+#acvv{
+  padding-left: 10px;
+}
+
+#ap_right h3, #ap_right p{
+  margin-left: 0px;
+}
+
+
+
+/* CSS MEDIA QUERIES */
+
+@media only screen and (max-width: 400px) {
+  body {
+    margin: 20px 100px;
+  }
+  #a_navbar {
+    margin: 0 300px;
+    width: 100%;
+    flex-direction: column;
+  }
+  #a_body {
+    flex-direction: column;
+  }
+  #a_right,
+  #a_left {
+    width: 700px;
+  }
+}
+
+
