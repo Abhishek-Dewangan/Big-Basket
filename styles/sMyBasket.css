@@ -198,6 +198,11 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
    border:none;
    font-family: 'Montserrat', sans-serif;
 }
+
+#sCheckoutBtn:hover{
+   background-color: #738d2b;
+}
+
 .fa-circle-minus:hover{
    color:#84c225;
 }
