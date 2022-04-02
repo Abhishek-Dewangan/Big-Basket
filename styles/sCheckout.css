@@ -437,7 +437,7 @@ hr1{
 /* CSS MEDIA QUERIES */
 
 
-@media all and (max-width:400px){
+@media all and (max-width:700px){
     #scheckoutMain{
         width:100%;
         height:auto;
