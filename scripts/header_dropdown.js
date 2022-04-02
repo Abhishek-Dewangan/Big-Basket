@@ -303,33 +303,38 @@ menuBtn.addEventListener("click", () => {
 let basketDiv = document.getElementById("mbasketdiv")
 let basket = document.getElementById("sbaskMain");
 
-
-basketDiv.addEventListener("mouseenter", () => {
-    let bigbasketCart = JSON.parse(localStorage.getItem("bigBasketCart")) || [];
-    console.log(bigbasketCart.length);
-    if(bigbasketCart.length > 0)
+if(basket != undefined){
+    basketDiv.addEventListener("mouseenter", () => {
+        let bigbasketCart = JSON.parse(localStorage.getItem("bigBasketCart")) || [];
+        console.log(bigbasketCart.length);
+        if(bigbasketCart.length > 0)
+            basket.style.display = "block";
+    })
+    
+    basketDiv.addEventListener("mouseleave", () => {
+        basket.style.display = "none";
+    })
+    
+    basket.addEventListener("mouseenter", () => {
         basket.style.display = "block";
-})
+    })
+    
+    basket.addEventListener("mouseleave", () => {
+        basket.style.display = "none";
+    })
 
-basketDiv.addEventListener("mouseleave", () => {
-    basket.style.display = "none";
-})
-
-basket.addEventListener("mouseenter", () => {
-    basket.style.display = "block";
-})
-
-basket.addEventListener("mouseleave", () => {
-    basket.style.display = "none";
-})
+    let checkoutBtn = document.getElementById("sCheckoutBtn");
+        checkoutBtn.addEventListener("click", () => {
+            window.location.href = "sCheckout.html";
+    })
+}
 
 
 
 
-let checkoutBtn = document.getElementById("sCheckoutBtn");
-checkoutBtn.addEventListener("click", () => {
-    window.location.href = "sCheckout.html";
-})
+
+
+
 
 
 

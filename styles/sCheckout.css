@@ -80,8 +80,8 @@ color:black;
 /* padding:0; */
 margin-top:-20px;
 margin-bottom:-20px;
-/* font-family: 'Roboto Serif', serif; */
-font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Serif', serif;
+/* font-family: 'Montserrat', sans-serif; */
 }
 #scheckoutMain{
 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -426,5 +426,201 @@ hr1{
 
 }
 
-/* HEADER CSS */
+
+
+
+
+
+
+
+/* CSS MEDIA QUERIES */
+
+
+@media all and (max-width:400px){
+    #scheckoutMain{
+        width:100%;
+        height:auto;
+    }
+    th,
+    td {
+    padding: 0
+    }
+    tr > th {
+    background-color: #555;
+    color: #fff;
+    font-weight:400;
+    font-size:10px;
+    }
+    #sThead>#sTrow{
+    padding:0px
+    }
+    #stImage{
+    width:0px;
+    }
+    #scheckoutTable,
+    td,
+    #sThead {
+    border: 1px solid #ddd;
+    text-align: left;;
+    width:380px;
+    }
+    #sTrow>#stDesc{
+    width:10%;
+    max-width: 90px;
+    background-color: #555;
+    padding-left:0px;
+    }
+    #stdCat{
+    font-size:8px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display:block;
+    white-space:nowrap;
+    }
+    #stdItemName{
+    font-size:13px;
+    padding-top:2px;
+    }
+    #stImage{
+    width:1%;
+    }
+    td{
+    border:none; 
+    border-bottom:1px solid black;
+    }
+    #stdItem{
+    text-align:left;
+    width:80px;
+    }
+    #stdPrice{
+    font-size:13px
+    }
+    #stdStrike{
+    font-size:10px;
+    padding-right:3px;
+    }
+    #stdUnitMain{
+    width:2%;
+    }
+    #stUnit{
+    padding-left:2px;
+    width:7%;
+    }
+    #stdUnit{
+    width:100%;
+    }
+    #stdQtyMain{
+    width:2%;
+    }
+    #stdQty{
+    width:78%;
+    height:15px;
+    justify-content:center;
+    padding-left:5px;
+    margin-left:3px;
+    }
+    #stdMinusBtn{
+    height:10px;
+    width:7px;
+    }
+    #stdInput{
+    font-size:10px
+    }
+    #stdPlusBtn{
+    height:10px;
+    width:7px;
+    }
+    #stQty{
+    width:2%;
+    padding-left:5px;
+    }
+    #stTotal{
+    width:8%;
+    padding-left:3px;
+    }
+    #stdTotal{
+    display:grid;
+    align-items: center;
+    justify-content:center;
+    }
+    #stdTotalPrice{
+    font-size:13px;
+    padding-top:10px;
+    }
+    #stdRemove{
+    margin-top:-15px;
+    text-align:center;
+    justify-content:center;
+    }
+    #stdSavings{
+    font-size:13px;
+    margin-top:1px;
+    }
+    #stdSavingsMain{
+        border-left:3px solid #dfdfdf;
+    }
+#sbaskThs{
+    display:grid;
+    width:100%;
+    margin-left:-10px;
+}
+#sbaskLhs{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+    justify-content:space-between;
+}
+#sbEmpty{
+    width:150px;
+}
+#sbContShop{
+    width:180px;
+    margin-top:-20px;
+}
+#sbaskRhs{
+    width:100%;
+    margin-top:20px;
+    margin-left:10px;
+    height:210px;
+}
+#sbsavingsDiv1{
+    height:100px;
+}
+#sbSubTotal1{
+    margin-top:-10px;
+}
+#sbSubTotal2{
+    border:none;
+}
+#hr1{
+    margin-top:-10px;
+}
+#sbCheckOutBtnDiv{
+    margin-left:50%;
+    height:30px;
+    width:150px;  
+}
+#sbCheckBtnDiv{
+    justify-content:center;
+    text-align:center; 
+    height:100%;
+}
+#sbCheckBtn{
+    font-size:15px;
+}
+.fa-circle-arrow-right{
+    font-size:15px;
+}
+#sbPiggyBank{
+    margin-top:-20px
+}
+#sbDelivCharge{
+    margin-top:10px;
+    font-size:13px;
+}
+#sbCoupon{
+    font-size:13px;
+}
+}
 

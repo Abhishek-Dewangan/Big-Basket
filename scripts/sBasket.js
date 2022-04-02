@@ -211,6 +211,12 @@ function p_reduceQuantity(index, baskPrice, baskSaved){
         // baskSaved.textContent = `Saved Rs. ${((item.prod_strike_price - item.prod_price) * item.prod_quantity).toFixed(2)}`;
     }
 
+    if(item.prod_strike_price == 0){
+        baskSaved.textContent = `Saved Rs. 0`;
+    }
+    else
+        baskSaved.textContent = `Saved Rs. ${((item.prod_strike_price - item.prod_price) * item.prod_quantity).toFixed(2)}`;
+
     p_calculateTotalPrice();
 
     localStorage.setItem("bigBasketCart", JSON.stringify(baskArr));

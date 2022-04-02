@@ -76,7 +76,7 @@ const createHeader = async () => {
                                 <li> <a class="p_category" href="#" name="kitchen">Kitchen,Garden & Pets </a> </li>
                                 <li> <a class="p_category" href="#" name="gourmet">Gourmet & World Foods</a> </li>
                                 <li> <a class="p_category" href="#" name="babycare">Baby Care</a> </li>
-                                <li> <a class="p_category" href="#" name="viewall">View All</a> </li>
+                                <li> <a class="p_category" href="viewAll.html" name="viewall">View All</a> </li>
                             </ul>
                         </div>
                         <div id="p_subCategory1"></div>
