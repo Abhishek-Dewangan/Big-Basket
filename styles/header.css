@@ -70,6 +70,9 @@ html{
     .mbasketText > p{
         font-weight: bold;
     }
+    .mbasketText > #m_cartCount {
+        margin-top: -12px;
+    }
     /* style */
     #miconbasket{
         color: #da251d;
@@ -81,12 +84,12 @@ html{
         border-style: none ;
         padding: 10px;
         line-height: 20px;
-        background-color: lavender;
+        background-color: whitesmoke;
     }
     .mbasketText{
         padding: 10px;
         height: 80px;
-        background-color: lavender;
+        background-color: whitesmoke;
     }
     #msebar{
         width: 60%;

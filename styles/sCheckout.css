@@ -121,6 +121,7 @@ text-align:right;
 font-size:11px;
 margin-right:12px;
 margin-top:-15px;
+text-decoration: line-through;
 }
 #stdQty{
 display:flex;

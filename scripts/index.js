@@ -348,7 +348,7 @@ let p_basketIcon = `<i class="fa-solid fa-basket-shopping"></i>`;
 
 
 
-// Function to add swiper class
+// Function to add swiper class - DO NOT TOUCH 
 
 let p_bestSellerSwiper = document.getElementById("p_bestSellerSwiper");
 

@@ -328,6 +328,11 @@ if(basket != undefined){
             window.location.href = "sCheckout.html";
     })
 }
+else{
+    basketDiv.addEventListener("click", () => {
+        window.location.href = "sCheckout.html";
+    })
+}
 
 
 

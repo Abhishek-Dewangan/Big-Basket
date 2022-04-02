@@ -355,7 +355,9 @@ body{
 }
 
 
-
+.mbasketText > #m_cartCount {
+    margin-top: 5px;
+}
 
 
 

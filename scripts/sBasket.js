@@ -170,7 +170,10 @@ const displayBaskItems = (event)=>{
         baskX.addEventListener("click",()=>{
             baskArr.splice(baskArr.indexOf(elem),1);
             localStorage.setItem("bigBasketCart", JSON.stringify(baskArr));
-            window.location.reload(true)
+            // window.location.reload(true)
+            displayBaskItems(baskArr);
+            p_calculateTotalPrice();
+            p_showCartNumber(baskArr);
         })
         firstdiv.append(baskImg,secondDiv,thirdDiv,fourthDiv,baskX)
         document.querySelector('#sBask').append(firstdiv)  
@@ -276,4 +279,25 @@ function p_calculateTotalPrice(){
     else{
         p_delivery.textContent = `Rs. 0`
     }
+}
+
+
+
+// var bigBasketCart = JSON.parse(localStorage.getItem("bigBasketCart")) || [];
+
+function p_showCartNumber(data){
+    let cartCountDiv = document.getElementById("m_cartCount");
+    let totalItems = baskArr.length;
+    
+    if(totalItems === 0){
+        cartCountDiv.textContent = `No items`
+    }
+    else if(totalItems === 1){
+        cartCountDiv.textContent = `1 item`
+    }
+    else if(totalItems >= 1){
+        cartCountDiv.textContent = `${baskArr.length} items`
+    }
+    
+    // cartCountDiv.textContent = `${bigBasketCart.length} items`
 }
