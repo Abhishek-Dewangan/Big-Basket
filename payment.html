@@ -124,6 +124,7 @@
             required
           />
           <button id="aApply" onclick="apply('basket20')">Apply</button>
+          <p class="voucherApply">(Apply voucher code if available)</p>
         </div>
         <h3>Order Summary</h3>
         <div id="aOrderSummary">
@@ -304,6 +305,9 @@
       // saving.innerText = saveMoney;
       p_voucherApplied = true;
       p_calculateTotalAndDisplay();
+      let voucherText = document.querySelector(".voucherApply");
+      voucherText.textContent = "Congratulations! extra 20% OFF."
+      voucherText.classList.add("appliedTrue");
     } else {
       alert('Invalid Voucher');
     }
@@ -395,20 +399,23 @@
   let addForm = document.querySelector("#a_addressForm");
   let delDiv = document.querySelector("#p_delivery");
   let topDiv = document.querySelector("#a_left");
+  let addBtn = document.querySelector("#p_changeBtn");
 
-  document.querySelector("#p_changeBtn").addEventListener("click", () => {
+  addBtn.addEventListener("click", () => {
     clickCount = (clickCount + 1) % 2;
     // console.log("count", clickCount);
     if(innerWidth >= 700){
-      if(clickCount){
-      addForm.style.display = "none";
-      delDiv.style.marginTop = "-200px";
-      topDiv.style.height = "100px";
-    }
+        if(clickCount){
+        addForm.style.display = "none";
+        delDiv.style.marginTop = "-200px";
+        topDiv.style.height = "100px";
+        addBtn.textContent = "CHANGE ADDRESS";
+      }
       else{
         topDiv.style.height = "600px";
         addForm.style.display = "block";
         delDiv.style.marginTop = "30px";
+        addBtn.textContent = "CLOSE";
       }
     }
     
