@@ -305,8 +305,9 @@ document.getElementById("p_companyReadLess").addEventListener("click", () => {
 const swiper2 = new Swiper('#swiper2', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
-    speed: 7000,
+    loop: false,
+    speed: 2000,
+    autoplay: false,
     // autoplay: {
     //     delay: 6000,
     //     disableOnInteraction: true,
