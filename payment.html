@@ -422,4 +422,16 @@
     
   })
 
+
+  window.addEventListener("resize", () => {
+    if(innerWidth <= 700){
+      if(delDiv.style.marginTop === "-200px"){
+        delDiv.style.marginTop = "50px";
+      }
+    }
+    else{
+      delDiv.style.marginTop = "-200px";
+    }
+  })
+
 </script>
