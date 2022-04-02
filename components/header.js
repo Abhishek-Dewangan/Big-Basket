@@ -98,7 +98,7 @@ const createMobileHeader = async () => {
                     </a>
                 </div>
                 <div class="mobileNavIcon">
-                    <a href="#">
+                    <a href="login.html">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </div>
@@ -113,7 +113,7 @@ const createMobileHeader = async () => {
                     </a>
                 </div>
                 <div class="mobileNavIcon">
-                    <a href="#">
+                    <a href="sCheckout.html">
                         <i class="fa-solid fa-cart-arrow-down"></i>
                     </a>
                 </div>

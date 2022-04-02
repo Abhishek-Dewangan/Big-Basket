@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Big Basket - Checkout Page</title>
     <link rel="stylesheet" href="./styles/payment.css">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
     <style></style>
   </head>
   <body>
@@ -31,65 +33,82 @@
     <!-- Body of Payment Page -->
     <div id="a_body">
       <!-- Address  personal Details -->
+      <!-- <div id="p_saved">
+        <p>Saved Address</p>
+        <div id="p_add">
+          "Shivaji Nagar, Malad (E), Mumbai - 400011"
+        </div>
+      </div> -->
       <form id="a_left">
-        <h3>Personal Details</h3>
-        <div id="a_personal">
-          <p>Enter first name</p>
-          <p>Enter last name</p>
-          <p>Enter contact number</p>
-          <input class="aInput" type="text" id="aFname" required />
-          <input class="aInput" type="text" id="aLname" required />
-          <input class="aInput" type="number" id="aNumber" required />
+        <div id="p_saved">
+          <h3>Saved Address</h3>
+          <div id="p_add">
+            Shivaji Nagar, Malad (E), Mumbai - 400011
+          </div>
+          <div id="p_changeBtn">CHANGE ADDRESS</div>
         </div>
-        <h3>Address Details</h3>
-        <div id="a_address">
-          <p>House number</p>
-          <p>Enter apartment name</p>
-          <input class="aInput" type="text"/>
-          <input class="aInput" type="text" />
-          <p>Enter street details</p>
-          <p>Enter landmark for easy reach out</p>
-          <input class="aInput" type="text" id="aStreet" />
-          <input class="aInput" type="text" id="aLandmark" />
-        </div>
-        <div id="a_select">
-          <p>Enter city name</p>
-          <p>Area detail</p>
-          <p>Enter Pincode</p>
-          <select name="" class="aSelect">
-            <option value="mumbai">Mumbai</option>
-            <option value="pune">Pune</option>
-            <option value="banglore">Banglore</option>
-            <option value="hyderabad">Hyderabad</option>
-            <option value="chennai">Chennai</option>
-          </select>
-          <select name="" class="aSelect">
-            <option value="andheri">Andheri</option>
-            <option value="bandra">Bandra</option>
-            <option value="goregaon">Goregaon</option>
-            <option value="juhu">Juhu</option>
-            <option value="borivalli">Borivalli</option>
-          </select>
-          <input class="aInput" type="number" required />
-        </div>
-        <div>
-          <p style="margin-left: 0px">Choose nick name for this address</p>
-          <select name="" class="aSelect">
-            <option value="home">HOME</option>
-            <option value="office">OFFICE</option>
-            <option value="other">OTHER</option>
-          </select>
-        </div>
-        <div>
-          <p>
-            <input class="aInput" type="checkbox" id="aAddress" /> Set this as
-            my default delevery address
-          </p>
-        </div>
-        <div id="aAddCancel">
-          <button>ADD ADDRESS</button>
-          <button>CANCEL</button>
-        </div>
+        <div id="a_addressForm">
+          <h3>Personal Details</h3>
+          <div id="a_personal">
+            <p>Enter first name</p>
+            <p>Enter last name</p>
+            <p>Enter contact number</p>
+            <input class="aInput" type="text" id="aFname" placeholder="Enter First Name" required />
+            <input class="aInput" type="text" id="aLname" placeholder="Enter Last Name" required />
+            <input class="aInput" type="number" id="aNumber" placeholder="Enter Contact Number" required />
+            </div>
+          <h3>Address Details</h3>
+          <div id="a_address">
+            <p>House number</p>
+            <p>Enter apartment name</p>
+            <input class="aInput" type="text" placeholder="Enter house number"  />
+            <input class="aInput" type="text" placeholder="Enter apartment name" />
+            <p>Enter street details</p>
+            <p>Enter landmark for easy reach out</p>
+            <input class="aInput" type="text" id="aStreet" placeholder="Enter street details" />
+            <input class="aInput" type="text" id="aLandmark" placeholder="Enter landmark" />
+          </div>
+          <div id="a_select">
+            <p>Enter city name</p>
+            <p>Area detail</p>
+            <p>Enter Pincode</p>
+            <select name="" class="aSelect">
+              <option value="--">Select City</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="pune">Pune</option>
+              <option value="banglore">Banglore</option>
+              <option value="hyderabad">Hyderabad</option>
+              <option value="chennai">Chennai</option>
+            </select>
+            <select name="" class="aSelect">
+              <option value="--">Select Locality</option>
+              <option value="andheri">Andheri</option>
+              <option value="bandra">Bandra</option>
+              <option value="goregaon">Goregaon</option>
+              <option value="juhu">Juhu</option>
+              <option value="borivalli">Borivalli</option>
+            </select>
+            <input class="aInput" type="number" placeholder="Enter PIN Code" required />
+          </div>
+          <div>
+            <p style="margin-left: 0px">Choose nick name for this address</p>
+            <select name="" class="aSelect">
+              <option value="home">HOME</option>
+              <option value="office">OFFICE</option>
+              <option value="other">OTHER</option>
+            </select>
+          </div>
+          <div>
+            <p>
+              <input class="aInput" type="checkbox" id="aAddress" /> Set this as
+              my default delivery address
+            </p>
+          </div>
+          <div id="aAddCancel">
+            <button>ADD ADDRESS</button>
+            <button>CANCEL</button>
+          </div>
+          </div>
       </form>
 
       <!-- Apply Voucher & Order Summary-->
@@ -114,10 +133,10 @@
             </div>
           </div>
           <div class="aSummary">
-            <p>Delevery Charge</p>
+            <p>Delivery Charges</p>
             <div class="aPrice">
               <!-- <p>Rs</p> -->
-              <p id="aDeleveryCharge">Rs. 50</p>
+              <p id="p_del_charges"></p>
             </div>
           </div>
           <hr />
@@ -139,19 +158,60 @@
       </div>
     </div>
 
+    <div id="p_delivery">
+      <h3>Delivery Options</h3>
+      <p class="p_del_header">Select Delivery Mode</p>
+      <select name="" id="p_delivery_type">
+        <option value="bbstandard">BB Standard</option>
+        <option value="bbexpress">BB Express</option>
+      </select>
+      <p class="p_del_header">Select Delivery Date</p>
+      <select name="" id="p_delivery_date">
+        <option value="1">Today - 02 April</option>
+        <option value="2">Tomorrow - 03 April</option>
+      </select>
+      <div id="p_delivery_time_grid">
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">10:00 - 11:00 A.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">12:00 - 01:00 P.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">01:00 - 02:00 P.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">04:00 - 05:00 P.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">05:00 - 06:00 P.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">06:00 - 08:00 P.M.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Credit / Debit Payment -->
     <div id="ap_main">
       <h3>Payment Option</h3>
       <div id="a_payment">
         <div id="ap_left">
           <button id="a_credit" onclick="cardPay()">Credit / Debit Card</button>
+          <button id="p_upi" onclick="upiPay()">UPI</button>
           <button>Netbanking</button>
-          <button>UPI</button>
           <button>Wallet</button>
           <button>Pay Later</button>
           <button>Cash/Card on Delevery</button>
         </div>
-        <div id="ap_right"></div>
+        <div id="ap_right">
+        </div>
       </div>
     </div>
   </body>
@@ -193,12 +253,39 @@
     payDetail.innerHTML = rightDiv;
   };
 
+  cardPay();
+
+  const upiPay = () => {
+    let rightDiv = `<h3>Pay via UPI</h3>
+          <div id="upiType">
+            <div class="upiOption">
+              <img src="https://i0.wp.com/zeevector.com/wp-content/uploads/Bhim-Logo-Vector.png?resize=600%2C137&ssl=1" alt="">
+            </div>
+            <div class="upiOption">
+              <img src="https://www.logo.wine/a/logo/Paytm/Paytm-Logo.wine.svg" alt="">
+            </div>
+            <div class="upiOption">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Pay_Logo_%282020%29.svg/1920px-Google_Pay_Logo_%282020%29.svg.png" alt="">
+            </div>
+            <div class="upiOption">
+              <img src="https://www.logo.wine/a/logo/PhonePe/PhonePe-Logo.wine.svg" alt="">
+            </div>
+            <div class="upiOption">
+              <img src="https://www.logo.wine/a/logo/Amazon_Pay/Amazon_Pay-Logo.wine.svg" alt="">
+            </div>
+            <div class="upiOption">
+              Other UPI Apps
+            </div>
+          </div>`
+          payDetail.innerHTML = rightDiv;
+  }
+
   // Order Summary Details
-  let basket = document.getElementById('aBasketPrice');
-  let basketValue = document.getElementById('aBasketPrice').innerText;
-  let deleveryCharge = document.getElementById('aDeleveryCharge').innerText;
-  let totalAmount = document.getElementById('aTotalAmount');
-  totalAmount.innerText = +basketValue + +deleveryCharge;
+  // let basket = document.getElementById('aBasketPrice');
+  // let basketValue = document.getElementById('aBasketPrice').innerText;
+  // // let deleveryCharge = document.getElementById('aDeleveryCharge').innerText;
+  // let totalAmount = document.getElementById('aTotalAmount');
+  // totalAmount.innerText = +basketValue + +deleveryCharge;
 
 
   let p_voucherApplied = false;
@@ -220,7 +307,7 @@
     }
   };
 
-
+  let bbExpressSelected = false;
 
   // Function to calculate total price and show it
 
@@ -246,8 +333,12 @@
       }
       if(p_voucherApplied) totalSavings = totalSavings + Math.round(total*0.2);
 
+      
       let grand_total = total+50;
 
+      if(bbExpressSelected){
+        grand_total = total + 100;
+      }
       // console.log(typeof(total), typeof(totalSavings));
 
       document.getElementById("aBasketPrice").textContent = `Rs. ${total}`;
@@ -255,9 +346,70 @@
       document.getElementById("aTotalAmount").textContent = `Rs. ${grand_total}`;
 
       document.getElementById("aTotalSaving").textContent = `Rs. ${totalSavings}`;
+
+      if(bbExpressSelected)
+        document.getElementById("p_del_charges").innerHTML = `Rs. 150`;
+      else
+        document.getElementById("p_del_charges").innerText = `Rs. 50`;
   }
 
   p_calculateTotalAndDisplay();
 
+
+  let p_delTimeDivs = document.querySelectorAll(".p_del_class");
+  let selected = null;
+
+  for(let i=0; i<p_delTimeDivs.length; i++){
+    let current = p_delTimeDivs[i];
+    current.addEventListener("click", () => {
+      if(selected){
+        selected.style.backgroundColor = "whitesmoke";
+        current.style.backgroundColor = "#bfe08e";
+        selected = current;
+      }
+      else{
+        current.style.backgroundColor = "#bfe08e";
+        selected = current;
+      }
+    })
+  }
+
+  
+
+  let deliveryType = document.getElementById("p_delivery_type");
+  deliveryType.addEventListener("change", () => {
+    if(deliveryType.value === "bbexpress"){
+      bbExpressSelected = true;
+      p_calculateTotalAndDisplay();
+    }
+    else{
+      bbExpressSelected = false;
+      p_calculateTotalAndDisplay();
+    }
+  })
+
+
+  let clickCount = 1;
+  let addForm = document.querySelector("#a_addressForm");
+  let delDiv = document.querySelector("#p_delivery");
+  let topDiv = document.querySelector("#a_left");
+
+  document.querySelector("#p_changeBtn").addEventListener("click", () => {
+    clickCount = (clickCount + 1) % 2;
+    // console.log("count", clickCount);
+    if(innerWidth >= 700){
+      if(clickCount){
+      addForm.style.display = "none";
+      delDiv.style.marginTop = "-200px";
+      topDiv.style.height = "100px";
+    }
+      else{
+        topDiv.style.height = "600px";
+        addForm.style.display = "block";
+        delDiv.style.marginTop = "30px";
+      }
+    }
+    
+  })
 
 </script>

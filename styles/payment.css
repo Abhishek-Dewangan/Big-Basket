@@ -108,7 +108,7 @@ input[type=number] {
   color: gray;
   font-family: 'Montserrat', sans-serif;
 }
-#a_credit:focus {
+#a_credit:focus, #p_upi:focus {
   color: black;
   background-color: white;
 }
@@ -291,24 +291,235 @@ input[type=number] {
 
 
 
+#p_delivery{
+  width: 790px;
+  margin-left: 150px;
+  margin-top: 30px;
+  height: 220px;
+  /* border: 1px solid red; */
+  background-color: rgb(228, 228, 228);
+  padding: 1px;
+  /* padding: 10px; */
+}
+
+#p_delivery_type, #p_delivery_date{
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px;
+  font-size: large;
+  /* margin-left: 2px; */
+  width: 25%;
+}
+
+.p_del_header{
+  display: inline-block;
+}
+
+#p_delivery_time_grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 30px;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.p_del_class{
+  /* border: 1px solid red; */
+  text-align: center;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  padding-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.p_del_class:hover{
+  background-color: #bfe08e;
+  cursor: pointer;
+}
+
+.p_del_class > i{
+  color: green;
+  font-size: 18px;
+}
+
+.p_del_time{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+#upiType{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60px 60px;
+  grid-gap: 20px;
+  margin-top: 30px;
+}
+
+.upiOption{
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.upiOption:hover{
+  border: 2px solid black;
+}
+
+.upiOption img{
+  width: 90%;
+}
+
+#p_saved{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid grey;
+}
+
+#p_changeBtn{
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#p_changeBtn:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+#p_add{
+  font-weight: bold;
+}
+
+#a_addressForm{
+  display: none;
+}
+
+#a_left{
+  /* border: 1px solid red; */
+  height: 100px;
+  /* height: 600px; */
+}
+
+#p_delivery{
+  margin-top: -200px;
+  /* margin-top: 30px; */
+}
+
+#ap_left > button {
+  cursor: pointer;
+}
+
+
 /* CSS MEDIA QUERIES */
 
-@media only screen and (max-width: 400px) {
-  body {
-    margin: 20px 100px;
-  }
-  #a_navbar {
-    margin: 0 300px;
+@media only screen and (max-width: 700px) {
+  #p_smallHeader{
+    height: 60px;
     width: 100%;
-    flex-direction: column;
+  }
+  #p_smallHeader > img{
+      height: 90%;
+  }
+
+  #a_body{
+    width: 95%;
+    margin: auto;
+    margin-top: 80px;
   }
   #a_body {
     flex-direction: column;
   }
   #a_right,
   #a_left {
-    width: 700px;
+    width: 95%;
+    margin: auto;
   }
+
+  #p_delivery{
+    width: 90%;
+    margin: auto;
+    height: 450px;
+    margin-top: 50px;
+  }
+  .p_del_header{
+    display: block;
+  }
+  #p_delivery_time_grid{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+  }
+
+  #p_delivery_type, #p_delivery_date{
+    width: 80%;
+    margin-left: 10px;
+  }
+
+  #aOrderSummary h3{
+    font-size: 14px;
+  }
+
+  #aOrderSummary p{
+    font-size: 14px;
+  }
+
+  #ap_main{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  #a_payment{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ap_right{
+    width: 100%;
+    margin: auto;
+  }
+
+  #a_personal, #a_address, #a_select{
+    grid-template-columns: 1fr;
+    grid-gap: 20px
+  }
+
+  #a_personal p, #a_address p{
+    display: none;
+  }
+
+  .aSelect{
+    font-size: 14px;
+  }
+
+  .aSelect:nth-child(4){
+    margin-top: 20px;
+  }
+
+  #a_select{
+    padding: 1px;
+  }
+
+  #a_select p{
+    display: none;
+  }
+
+  /* #a_addressForm{
+    display: block;
+  } */
+
 }
 
 
