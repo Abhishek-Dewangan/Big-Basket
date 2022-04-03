@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+#p_smallHeader{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a5cd39;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top:0px;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+#ydiv{
+    width: 30%;
+    height: 50vh;
+    background-color: white;
+    border: 1px solid;
+    /* padding: 2%; */
+    box-shadow: rgb(96 96 96/ 16%) 4px 4px 4px 4px;
+    margin: auto;
+    margin-top: 150px;
+}
+        
+#ydiv1{
+    /* margin-top: 100px; */
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+/* #yinput{
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid red; */
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} */
+
+/* #yinput > div{
+    /* border: 1px solid blue; */
+    /* width: 40%;
+}
+#yinput input{
+    border: none;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+}  */
+
+#ydiv h2{
+    margin-top: 20px;
+    color: #84c225;
+}
+#ydiv h3{
+    color: grey;
+    margin-top: 15px;
+}
+#ystartshopping{
+    color: white;
+}
+#ydiv1 button{
+    background-color: #84c225;
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+#ydiv1 button:hover{
+    background-color: green;
+}
+
+/* #yinput{
+    width: 25vw;
+    margin: auto;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 50px;
+    grid-gap: 5%;
+}
+
+#yinput > div {
+    border: 1px solid blue;
+    width: 10vw;
+}
+
+#yinput input{
+    border: 1px solid green;
+    width: 90%;
+} */
+
+#inputForm{
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 30px;
+}
+
+
+#inputForm input{
+    padding: 10px;
+    font-size: 16px;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+#inputForm input:focus{
+    border-bottom: 2px solid #84c225;
+    outline: none;
+}
+
+
+
+
+@media all and (max-width: 700px){
+    #p_smallHeader{
+        height: 60px;
+        width: 100%;
+    }
+    #p_smallHeader > img{
+        height: 90%;
+    }
+
+    #ydiv{
+        width: 90vw;
+        height: 60vh;
+    }
+}
