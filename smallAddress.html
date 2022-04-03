@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        body{
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+        background-color: rgba(0, 0, 0, 0.5);
+        }
+
+
+        #p_smallHeader{
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #a5cd39;
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top:0px;
+            z-index: 1000;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        
+
+        @media all and (max-width: 700px){
+            #p_smallHeader{
+                height: 60px;
+                width: 100%;
+            }
+            #p_smallHeader > img{
+                height: 90%;
+            }
+
+            #backbtn{
+                margin-top: 70px;
+                padding: 15px;
+                font-size: 18px;
+                background-color: #fff;
+                cursor: pointer;
+                border-radius: 10px;
+                margin-left: 5%;
+                font-family: 'Montserrat', sans-serif;
+            }
+            #backbtn:hover{
+                background-color: #000;
+                color: #fff;
+            }
+
+            #address{
+                width: 90%; 
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                background-color: #e4e4e4;
+            }
+
+            #address > button{
+                padding: 10px;
+                border-radius: 5px;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            #address > button:hover{
+                background-color: #000;
+                color: #fff;
+            }
+
+            .addressInput{
+                padding: 5px;
+                font-size: 16px;
+                padding-left: 10px;
+                border: none;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .addressInput:focus{
+                border: none;
+                outline: 2px solid #a5cd39;
+            }
+
+            .addressHeader{
+                font-size: 18px;
+                font-weight: bold;
+            } 
+
+            #address select{
+                font-family: 'Montserrat', sans-serif;
+                padding: 5px;
+                padding-left: 10px;
+                font-size: 16px;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="p_smallHeader">
+        <a href="index.html">
+            <img src="https://www.bbassets.com/static/v2531/custPage/build/content/img/bb_logo.png" alt="">
+        </a>
+    </div>
+    <button id="backbtn" onclick="window.location.href = 'payment.html'">
+        Go back
+    </button>
+    <form action="" id="address">
+        <p class="addressHeader">
+            Personal Details
+        </p>
+        <input type="text" placeholder="Enter first name" class="addressInput">
+        <input type="text" placeholder="Enter last name" class="addressInput">
+        <input type="text" placeholder="Enter contact name" class="addressInput">
+        <p class="addressHeader">
+            Address Details
+        </p>
+        <input type="text" placeholder="Enter house name" class="addressInput">
+        <input type="text" placeholder="Enter street name" class="addressInput">
+        <input type="text" placeholder="Enter locality" class="addressInput">
+        <input type="text" placeholder="Enter landmark" class="addressInput">
+        <p class="addressHeader">
+            Select City
+        </p>
+        <select name="" id="">
+            <option value="">Mumbai</option>
+            <option value="">Delhi</option>
+            <option value="">Pune</option>
+            <option value="">Chennai</option>
+        </select>
+        <input type="text" placeholder="Enter PIN code" class="addressInput">
+        <button onclick="window.location.href = 'payment.html'">ADD ADDRESS</button>
+    </form>
+</body>
+</html>

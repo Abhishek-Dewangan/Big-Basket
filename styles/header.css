@@ -1,0 +1,477 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#header{
+    /* border: 1px solid black; */
+        width: 100%;
+        height: 210px;
+        margin: auto;
+        background-color: #fff;
+}
+
+.header-active{
+        /* height: 80px; */
+        position:fixed;
+        width: 100%;
+        top: 0px;
+        left:0px;
+        right:0px;
+        z-index: 3000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#mupper{
+    /* border: 1px solid black; */
+        width: 80%;
+        margin: auto;
+        /* border: 1px solid red; */
+        padding: 10px;
+        display: flex;   
+        justify-content: flex-end;
+        font-size: 15px; 
+        gap: 20px;   
+}
+#mmiddle{
+        width: 80%;
+        margin: auto;
+        margin-top: -10px;
+        /* border: 1px solid red; */
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+#mlogo{
+        width: 20%;
+        height: 100%; 
+        cursor: pointer;
+    }
+    #mlogoimg{
+        width: 100%;
+        height: 100%; 
+    }
+
+    #mbasketdiv{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+    }
+    .mbasketText{
+        text-align: right;
+    }
+    .mbasketText > p{
+        font-weight: bold;
+    }
+    .mbasketText > #m_cartCount {
+        margin-top: -12px;
+    }
+    /* style */
+    #miconbasket{
+        color: #da251d;
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    #mbasket{
+        height: 80px;
+        border-style: none ;
+        padding: 10px;
+        line-height: 20px;
+        background-color: whitesmoke;
+    }
+    .mbasketText{
+        padding: 10px;
+        height: 80px;
+        background-color: whitesmoke;
+    }
+    #msebar{
+        width: 60%;
+        /* border: 1px solid red;  */
+        
+    }
+    #mlogo{
+        width: 20%;
+        height: 100%; 
+
+    }
+    #mlogoimg{
+        width: 100%;
+        height: 100%; 
+    }
+    .mflex{
+        display: flex;
+
+    }
+    .mborder{
+        border: 1px solid black;
+    }
+    /* #search{
+        width: 80%;
+        height: 100%;
+    } */
+    #monediv{
+        width: 100%;
+        height: 80%;
+    }
+
+    .mtopmerg{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .minputsearch{
+        width:70%;
+        padding: 8px;
+        font-size: 14px;
+    }
+    .minputsearch:focus{
+        border: 2px solid #a5cd39;
+        outline: none;
+    }
+    .msearchbtn{
+        height: 41px;
+        padding: 9px;
+        background-color: #a5cd39;
+        border-style: none ;
+        margin-left: -5px;
+        outline: none;
+        cursor: pointer;
+        /* border: 4px solid #a5cd39; */
+    }
+    .msearchbtn:focus{
+        outline: none;
+        border: 1px solid #a5cd39;
+    }
+    .miconsearch{
+        color: white;
+        font-size: 17px;
+    }
+    #mcount{
+        display: inline;
+    }
+     #mlower{
+        width: 100%;
+        height: 50px;
+        /* display: flex; */
+        border: 1px splid rgb(212, 209, 209);
+     
+       
+    }
+    #mselectcat{
+        width: 250px;
+        height: 30px;
+        
+    }
+   #mfstopt{
+        background-color: #a5cd39;
+        color: white;
+    }
+   #mgrid select{
+    border: none;
+   }
+   #mgrid{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+   }
+   #mlogin:hover{
+       color: #a5cd39;
+       cursor: pointer;
+   }
+
+
+
+/* DROP DOWN CSS STARTS */
+
+
+*{
+    box-sizing: border-box;
+}
+
+#p_categoryMegaContainer{
+    display: none;
+}
+
+#p_categoryHeaders{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    padding-left: 0px;
+    /* border: 1px solid red; */
+}
+
+
+
+#p_mainCategory{
+    position:relative;
+}
+
+#p_categoryContainer{
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 450px;
+    /* border: 1px solid red; */
+    z-index: 1000;
+    background-color: #fff;
+}
+
+#p_categoryContainer > div{
+    width: 20%;
+}
+
+#p_subCategory1, #p_subCategory2, #p_subCategory3{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+
+.p_category{
+    text-decoration: none;
+    color: #000;
+}
+
+
+#p_categoryDropdown{
+    padding: 15px;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: #84c225;
+    text-decoration: none;
+    color: #fff;
+    padding-right: 5px;
+}
+
+#p_dropdownIcon{
+    margin-left: 25px;
+}
+
+.p_offerLinks i{
+    color: crimson;
+}
+
+a.p_offerLinks{
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.p_offerLinks:hover{
+    background-color: #6da21c;
+    color: #fff;
+}
+
+.p_offerLinks:hover i{
+    color: #fff;
+}
+
+#p_mainCategory > ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+#p_mainCategory > ul > li{
+    font-size: 16px;
+    padding: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
+
+#p_mainCategory > ul > li:hover{
+    background-color: #eaeaea;
+}
+
+a.p_category{
+    padding: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.p_catImage{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+}
+
+.p_sublist{
+    list-style: none;
+    padding-left: 0px;
+    cursor: pointer;
+}
+
+.p_sublist > li{
+    padding: 5px;
+    font-size: 14px;
+}
+
+.p_sublist > li:hover{
+    font-weight: bold;
+}
+
+.p_popularHeader{
+    color: #84c225;
+    font-weight: bold;
+}
+
+#p_subCategory1{
+    background-color: #eaeaea;
+}
+
+#p_subCategory1 > ul > li:hover{
+    background-color: #fff;
+}
+
+
+/* Hiding Small Mobile Navbar */
+#mediaHeader{
+    display: none;
+}
+
+/* #mbasketdiv{
+    position: relative;
+} */
+
+.bask-scroll-top{
+    position: absolute;
+    z-index: 4000;
+    top: 18%;
+    left: 53.2%;
+    display: block;
+}
+
+#sbaskMain{
+    position: fixed;
+    z-index: 7000;
+    left: 53.2%;
+    top: 18%;
+    display: none;
+}
+
+.scroll-stop{
+    top: 18%;
+}
+
+.scroll-active{
+    top: 10%;
+}
+
+#mgrid select{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+@media all and (max-width: 700px){
+    #header{
+        display: none;
+    }
+
+    #mediaHeader{
+        display: block;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 5000;
+    }
+
+    #mobileHeader{
+        width: 100vw;
+        background-color: #84c225;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* #mobileHeader > div{
+        border: 1px solid blue;
+    } */
+    
+    #mobileNavigation{
+        height:50%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .mobileNavIcon{
+        display: flex;
+        align-items: center;
+    }
+    
+    .mobileNavIcon i{
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    .mobileNavIcon img{
+        width: 25px;
+        height: 25px;
+    }
+    
+    #mobileSearch{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #mobileSearchbox{
+        width: 98%;
+        height: 30px;
+        padding: 5px;
+        margin-left: 2px;
+        font-size: 14px;
+    }
+    
+    #mobileSearch > i{
+        font-size: 18px;
+        padding: 5px;
+        margin-left: -40px;
+    }
+    
+    .mobileLinksDiv{
+        position: fixed;
+        top: 80px;
+        left: 0px;
+        right: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: whitesmoke;
+        z-index: 1000;
+        display: none;
+    }
+    
+    .mobileLinks > li{
+        width: 100%;
+        padding: 5px;
+        padding-left: 15px;
+        border-bottom: 1px solid lightgray;
+    }
+    
+    .mobileLinks > li > a{
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .mobileLinksDiv-active{
+        display: block;
+    }
+}
