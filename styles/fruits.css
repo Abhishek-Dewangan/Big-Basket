@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* TOP CAROUSEL CSS */
+#p_topSlider{
+    margin-top: 10px;
+    width: 100vw;
+    /* border: 1px solid red; */
+}
+
+.carousel-indicators li{
+    margin: 0px;
+    width: 100px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 120%;
+    cursor: pointer;
+    text-align: center;
+    text-indent: 0px;
+    padding: 10px;
+}
+
+.carousel-indicators .active{
+    border-bottom: 6px solid #84c225;
+}
+
+.carousel-indicators{
+    margin-bottom: -10px;
+}
+
+
+/* PRODUCT DISPLAU AREA */
+#p_topFoodContainer{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#p_filtersContainer{
+    width: 25%;
+    padding-right: 25px;
+    border-right: 1px solid lightgray;
+    /* height: 200px; */
+    /* border: 1px solid blue; */
+}
+
+
+#p_productsContainer{
+    width: 73%;
+    /* height: 200px; */
+    padding: 10px;
+    /* border: 1px solid blue; */
+}
+
+#p_productsHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #p_productsHeader > div{
+    font-size: 14px;
+    font-weight: bold;
+} */
+
+#p_productsHeader select{
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#p_productAll{
+    margin-top: 20px;
+}
+
+#p_productAll p{
+    font-size: 14px;
+    width: 18%;
+    border-bottom: 3px solid #84c225;
+}
+
+#p_productAll i{
+    color: #84c225;
+    margin-right: 15px;
+}
+
+
+#p_productsDisplayGrid{
+    padding-top:20px;
+    border-top: 1px solid lightgray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 520px;
+    grid-auto-rows: 520px;
+    grid-gap: 30px;
+}
+
+.p_categoryHeader{
+    color: #6aa16c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.p_categorySubHeader{
+    list-style: none;
+    padding-left: 15px;
+}
+
+.p_categorySubHeader li{
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.p_categorySubHeader li:hover{
+    color: green;
+}
+
+/* FILTER AREA */
+
+.p_FiltersDiv{
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid blue; */
+    margin-top: 15px;
+}
+
+.p_FiltersDiv > h5{
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+}
+
+.p_filterName{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #84c225;
+}
+
+.p_checkboxDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.p_checkbox{
+    margin-right: 12px;
+    width: 15px;
+    height: 15px;
+}
+
+
+/* RESET BUTTON */
+
+#p_resetBtnDiv{
+    text-align: right;
+    width: 95%;
+    margin: auto;
+}
+
+
+#p_resetButton{
+    padding: 5px;
+    background-color: #fff;
+    color: crimson;
+    border: 2px solid crimson;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    outline:none;
+}
+
+#p_resetButton:hover{
+    cursor: pointer;
+    background-color: crimson;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+/* CSS FROM OTHER FILE */
+
+.p_itemMasterDiv{
+    /* border: 1px solid blue; */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.p_itemMasterDiv:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+
+
+
+.p_itemDiscountDiv{
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
+    text-align: right;
+    color: crimson;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.p_redAsterisk{
+    width: 20px;
+    height: 20px;
+}
+
+.p_itemthumbnailDiv{
+    position: relative;
+    /* border: 1px solid red; */
+    padding: 15px;
+    text-align: center;
+}
+
+.p_vnvicon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 90%;
+    left: 5%;
+}
+
+.p_itemBrandNameDiv{
+    font-size: 13px;
+    color: grey;
+}
+
+.p_itemNameDiv{
+    font-size: 13px;
+    /* border: 1px solid blue; */
+    height: 100px;
+}
+
+.p_itemRatingDiv{
+    background-color: #e3ebda;
+    color: #72a545;
+    width: 25%;
+    padding: 2px;
+    padding-left: 4px;
+    font-weight: bold;
+}
+
+
+
+.p_itemQuantitySelectDiv select {
+    width: 100%;
+    margin: auto;
+}
+
+.p_itemQuantitySelectDiv select{
+    padding: 3px;
+}
+
+.p_itemPriceDeliveryDiv{
+    background-color: #f4f3f2;
+    padding: 5px;
+    padding-bottom: 10px;
+    margin-top: -8px;
+}
+
+/* .p_itemPriceDeliveryDiv > div{
+    border: 1px solid blue;
+} */
+
+.p_itemPriceDiv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* .p_itemPriceDiv p{
+    border: 1px solid red;
+} */
+
+.p_itemStrikePrice{
+    text-decoration: line-through;
+    font-size: 14px;
+    /* border: 1px solid red; */
+}
+
+.p_itemPrice{
+    font-size: 18px;
+    /* border: 1px solid red; */
+    /* font-weight: bold; */
+}
+
+.p_itemShippingInfoDiv{
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+.p_itemShippingInfoDiv i{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.p_itemShippingInfoDiv i:hover{
+    color: #84c225;
+}
+
+.p_itemQtyCartDiv{
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.p_itemQtyTextBox{
+    text-align: center;
+    padding: 3px;
+    margin-left: 5px;
+}
+
+
+.p_itemAddCartBtn{
+    background-color: #ffd65c;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 8px;
+}
+
+.p_itemAddCartBtn i{
+    margin-left: 5px;
+}
+
+.p_itemAddCartBtn:hover{
+    background-color: #ffc006;
+}
+
+
+
+
+/* NEW CSS */
+
+#p_topImgBanner{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#p_topImgBanner > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+/* CSS Media Queries */
+
+@media all and (max-width: 700px){
+    #p_topImgBanner{
+        width: 95%;
+        height: 40px;
+    }
+    #p_topSlider{
+        margin-top: 0px;
+    }
+
+    .carousel-indicators li{
+        display: none;
+    }
+
+    #p_topFoodContainer{
+        width: 95%;
+        margin: auto;
+        flex-direction: column-reverse;
+    }
+
+    #p_filtersContainer{
+        display: block;
+        width: 95%;
+        margin: auto;
+    }
+
+    #p_productsContainer{
+        width: 100%;
+    }
+
+    #p_productsHeader select{
+        font-size: 10px;
+    }
+
+    #p_productsHeader > h3{
+        font-size: 17px;
+    }
+
+    #p_productAll p{
+        width: 25%;
+    }
+
+    #p_productsDisplayGrid{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media all and (min-width: 500px) and (max-width: 700px){
+    #p_productsDisplayGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

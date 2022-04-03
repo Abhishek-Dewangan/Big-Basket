@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://www.bbassets.com/static/v2531/uiv2/images/favicon.ico" rel="icon" type="image/ico" sizes="16x16"/>
+    <title>Big Basket - Order Confirmation Page</title>
+    <style>
+      #p_smallHeader{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #a5cd39;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top:0px;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      center{
+        margin-top: 130px;
+      }
+      #aback {
+        width: fit-content;
+        padding: 10px;
+        font-size: 30px;
+        background-color: rgb(22, 175, 22);
+        border-radius: 5px;
+      }
+      #aback:hover{
+        background-color: green;
+      }
+      #abackToHome {
+          color: white;
+          text-decoration: none;
+          font-family: sans-serif;
+      }
+
+
+
+      @media all and (max-width: 400px){
+        #p_smallHeader{
+        height: 60px;
+        width: 100%;
+        }
+        #p_smallHeader > img{
+            height: 90%;
+        }
+        center > img{
+          width: 340px;
+        }
+        #aback{
+          padding: 10px;
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="p_smallHeader">
+      <a href="index.html">
+        <img src="https://www.bbassets.com/static/v2531/custPage/build/content/img/bb_logo.png" alt="">
+      </a>
+    </div>
+    <center>
+      <img
+        src="./images/success.png"
+      />
+      <div id="aback">
+        <a href="index.html" id="abackToHome">Back to Home</a>
+      </div>
+    </center>
+  </body>
+</html>

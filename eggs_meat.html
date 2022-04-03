@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
+
+    <!-- FOOTER CSS -->
+    <link rel="stylesheet" href="./styles/footer.css">
+    
+    <link rel="stylesheet" href="./styles/eggs_meat.css">
+
+    <link rel="stylesheet" href="./styles/header.css">
+
+    <link rel="stylesheet" href="./styles/sMyBasket.css">
+
+    <link href="https://www.bbassets.com/static/v2531/uiv2/images/favicon.ico" rel="icon" type="image/ico" sizes="16x16"/>
+
+    <title>
+        Meat Shop Near Me: Best Meat Products Online at Great Prices in India: Eggs, Meat & Fish Store
+    </title>
+    
+</head>
+<body>
+
+    <div id="header">
+        <!-- Will be imported -->
+    </div>
+
+    <div id="mediaHeader"></div>
+    <div id = "sbaskMain">
+        <div id = "sBask"></div>
+        <div id = "sBaskTdiv">
+            <div id = "sbaskDeliv1">
+                <p>**Actual Delivery Charges computed at checkout</p>
+                <!-- <a href="https://www.bigbasket.com/delivery-charge-new/">?</a> -->
+            </div>
+            
+            <div id = "sbaskDeliv2">
+                <div id = "sbaskSubT1">
+                    <p>Sub Total :</p>
+                    <p id ="stotalPrice"></p>
+                </div>
+                <div id = "sbaskSubT2">
+                    <p>Delivery Charge :</p>
+                    <p id="p_delivery"></p>
+                </div>
+                <button id = "sCheckoutBtn">View Basket & Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="p_topSlider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#p_topSlider" data-slide-to="0" class="active">Fresho Meat</li>
+            <li data-target="#p_topSlider" data-slide-to="1">Fresho Marinades</li>
+            <li data-target="#p_topSlider" data-slide-to="2">Meatzza Offers</li>
+            <li data-target="#p_topSlider" data-slide-to="3">La-carne Offers</li>
+            <li data-target="#p_topSlider" data-slide-to="4">Prawns & Basa Fish</li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="https://www.bigbasket.com/media/uploads/banner_images/l1_EMF_M_Weekdayhyd_300_300322.jpeg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://www.bigbasket.com/media/uploads/banner_images/CXNP9551_1200x300_140322.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://www.bigbasket.com/media/uploads/banner_images/L1-CXNP6864-1200x300-12thDec.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://www.bigbasket.com/media/uploads/banner_images/L1-CXNP6860-1200x300-12thDec.jpg" alt="Fourth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://www.bigbasket.com/media/uploads/banner_images/L1_CXNP445_1200X300_16THAPR21.jpg" alt="Fourth slide">
+            </div>
+        </div>
+        <!-- <a class="carousel-control-prev" href="#p_topSlider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#p_topSlider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a> -->
+    </div>
+
+
+    <div id="p_topFoodContainer">
+        <div id="p_filtersContainer">
+            <div id="p_resetBtnDiv">
+                <button id="p_resetButton">
+                    CLEAR &times;
+                </button>
+            </div>
+            <div class="p_FiltersDiv">
+                <h5>
+                    <span class="p_filterName">
+                        Category
+                    </span>
+                </h5>
+                <!-- <div id="p_brandCheckbox" class="p_checkboxDiv">
+                    
+                </div> -->
+                <h6 class="p_categoryHeader">Eggs, Meat & Fish </h6>
+                <ul class="p_categorySubHeader">
+                    <li>Eggs</li>
+                    <li>Fish & SeaFood</li>
+                    <li>Marinades</li>
+                    <li>Mutton & Lamb</li>
+                    <li>Pork & Other Meats</li>
+                    <li>Poultry</li>
+                    <li>Sausages, Bacon & Salami</li>
+                </ul>
+            </div>
+            <div class="p_FiltersDiv">
+                <h5>
+                    <span class="p_filterName">
+                        Brands
+                    </span>
+                </h5>
+                <div id="p_brandCheckbox" class="p_checkboxDiv">
+                    
+                </div>
+            </div>
+            <div class="p_FiltersDiv">
+                <h5>
+                    <span class="p_filterName">
+                        Price
+                    </span>
+                </h5>
+                <div id="p_foodPriceCheckbox" class="p_checkboxDiv">
+                    
+                </div>
+            </div>
+            <div class="p_FiltersDiv">
+                <h5>
+                    <span class="p_filterName">
+                        Discount
+                    </span>
+                </h5>
+                <div id="p_foodDiscountCheckbox" class="p_checkboxDiv">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="p_productsContainer">
+            <div id="p_productsHeader">
+                <h3>Eggs, Meat & Fish <span id="p_totalItems"></span></h3>
+                <div>
+                    <select id="p_foodgrainSorter">
+                        <option value="--">
+                           --- Sort Items By ---
+                        </option>
+                        <option value="p_pop">Popularity</option>
+                        <option value="p_l2h">Price - Low To High</option>
+                        <option value="p_h2l">Price - High To Low</option>
+                        <option value="p_alpha">Alphabetical</option>
+                        <option value="p_disch2l">Discount - High To Low</option>
+                    </select>
+                </div>
+            </div>
+            <div id="p_productAll">
+                <p>
+                    <i class="fa-solid fa-truck"></i>
+                    ALL PRODUCTS
+                </p>
+            </div>
+            <div id="p_productsDisplayGrid">
+
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div id="footer">
+
+    </div>
+</body>
+</html>
+
+<script src="./scripts/header_dropdown.js" type="module"></script>
+
+<script src="./scripts/eggs_meat.js" type="module">
+
+</script>
+
+<script src="./scripts/sBasket.js"></script>

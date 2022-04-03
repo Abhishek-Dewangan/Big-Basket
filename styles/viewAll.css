@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* #r_topContainer{
+    width: 80%;
+    margin: auto;
+    border: 1px solid red;
+} */
+
+.h1{
+    margin-left: 10%;
+    margin-top: 10px;
+    font-size: 25px;
+}
+.h2{
+    margin-left: 10%;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.h3{
+    margin-left: 10%;
+    margin-right: 10% !important;
+    font-size: 16px;
+}
+.box1{
+    width: 17%;
+    text-align: left !important;
+}
+.box2{
+    width: 17%;
+    text-align: left !important;
+}
+.box3{
+    width: 17%;
+    text-align: left !important; 
+}
+.box4{
+    width: 20%;
+    text-align: left !important;
+}
+.box1>p{
+    font-size: 15px;
+    /* line-height: 50%;    */
+}
+.box2>p{
+    font-size: 15px;
+    /* line-height: 50%;   */
+}
+.box3>p{
+    font-size: 15px;
+    /* line-height: 50%; */
+}
+.box4>p{
+    font-size: 15px;
+    /* line-height: 50%; */
+}
+.m{
+    margin-left: 10%;
+}
+.n{
+    margin-left: 10%;
+}
+/* 1st box */
+.abox{
+    height: 235px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between; 
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray; 
+}
+/* 2nd box */
+.bbox{
+    height: 140px !important;
+    width: 78%;
+    margin-left: 10%; 
+    margin-right: 10%;
+    display: flex;
+    margin-top: 20px;
+    /* border: 1px solid red; */
+    justify-content: space-between;   
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey; 
+}
+/* 3rd box */
+.cbox{
+    height: 240px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+} 
+/* 4th box */
+.dbox{
+    height: 280px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5px;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between; 
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey; 
+}
+/* 5th box */
+.ebox{
+    height: 265px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray; 
+} 
+/* 6th box */
+.fbox{
+    height: 170px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey; 
+}
+/* 7th box */
+.gbox{
+    height: 190px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10% ;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray; 
+} 
+/* 8th box */
+.hbox{
+    height: 120px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey; 
+}
+/* 9th box */
+.ibox{
+    height: 220px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10% !important;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray; 
+}
+/* 10th box */
+.jbox{
+    height: 230px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray; 
+}
+/* 11th box */
+.kbox{
+    height: 150px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between;
+    
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+}
+/* 12th box */
+.lbox{
+    height: 220px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 13th box */
+.mbox{
+    height: 220px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 14th box */
+.nbox{
+    height: 240px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;  
+}
+/* 15th box */
+.obox{
+    height: 230px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 16th box */
+.pbox{
+    height: 235px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 17th box */
+.qbox{
+    height: 255px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;  
+}
+/* 18th box */
+.rbox{
+    height: 190px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 19th box */
+.sbox{
+    height: 215px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 20th box */
+.tbox{
+    height: 230px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;  
+}
+/* 21st box */
+.ubox{
+    height: 170px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 22nd box */
+.vbox{
+    height: 240px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;  
+}
+/* 23rd box */
+.wbox{
+    height: 245px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 24th box */
+.xbox{
+    height: 250px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 25th box */
+.ybox{
+    height: 210px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;  
+}
+/* 26th box */
+.zbox{
+    height: 270px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between; 
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;  
+}
+/* 27th box */
+.rojabox{
+    height: 170px !important;
+    width: 78%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* border: 1px solid red ; */
+    justify-content: space-between;
+    
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;  
+}
+
+
+.mbasketText > #m_cartCount {
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

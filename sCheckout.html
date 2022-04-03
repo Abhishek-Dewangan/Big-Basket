@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Best Online Grocery Store in India. Save Big on Grocery Shopping | bigbasket.com
+    </title>
+    <script src="https://kit.fontawesome.com/6db4c4f1ca.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/sCheckout.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link href="https://www.bbassets.com/static/v2531/uiv2/images/favicon.ico" rel="icon" type="image/ico" sizes="16x16"/>
+    <style>
+       
+    </style>
+</head>
+
+<div id="p_smallHeader">
+    <a href="index.html">
+        <img src="https://www.bbassets.com/static/v2531/custPage/build/content/img/bb_logo.png" alt="">
+    </a>
+</div>
+
+
+<body id = "sCheckoutBody">
+    <div id = "scheckoutMain">
+        <div id = "sFirstdiv">
+            <p>Your Basket</p>
+            <p id = "checkoutLength">(0 Items)</p>
+        </div>
+        <hr>
+        <main id = "scheckoutTableMain">
+            <table id = "scheckoutTable">
+                <thead id = "sThead">
+                    <tr id ="sTrow">
+                        <th id = "stImage"></th>
+                        <th id = "stDesc">ITEM DESCRIPTION</th>
+                        <th id = "stUnit">UNIT PRICE</th>
+                        <th id = "stQty">QUANTITY</th>
+                        <th id = "stTotal">SUBTOTAL</th>
+                        <th id = "stSavings">SAVINGS</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </main>
+        <div id = "sbaskThs">
+            <div id = "sbaskLhs">
+                <button id = "sbEmpty"><i class="fa-solid fa-basket-shopping"></i>EMPTY BASKET</button>
+                <button id = "sbContShop" onclick='window.location.href="index.html"'>CONTINUE SHOPPING</button>
+            </div>
+            <div id = "sbaskRhs">
+                <div id = "sbsavingsMainDiv">
+                    <div id = "sbsavingsDiv1">
+                        <div>
+                            <div id = "sbSubTotal1">
+                                <p>Subtotal</p>
+                                <p id ="stotalPrice">0</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div id = "sbSubTotal2">
+                                <div id = "sbQuestionMarkDiv">
+                                    <p>Delivery Charges</p>
+                                    <i class="fa-solid fa-circle-question"></i>
+                                </div>
+                                
+                                <p id="p_DeliveryCharges"></p>
+                            </div>
+                        </div>
+                        <hr id = "hr1">
+                        <div>
+                            <div id = "sbMainTotal">
+                                <p>TOTAL</p>
+                                <P id = "sbCheckTP">0</P>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "sbSavingsImageDiv">
+                        <img id = "sbPiggyBank" src="./images/piggy-bank.png" alt="">
+                        <div id ="sbYouSavedDiv">
+                            <p id = "sbYouSaved">You saved!</p>
+                            <p id = "sbYouSavedAmount">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div id = "sbCouponDiv">
+                    <p id = "sbCoupon">* Discount Coupons are available for your order</p>
+                    <p><p></p></p>
+                </div>
+                <hr id = "hr2">
+                <button id = "sbCheckOutBtnDiv" onclick="window.location.href='payment.html'">
+                    <div id = "sbCheckBtnDiv">
+                        <p id = "sbCheckBtn">CHECKOUT</p>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                    </div>
+                </button>
+                <div id = 'sbDelivChargeDiv'>
+                    <p id = "sbDelivCharge">** Actual delivery charges computed at checkout time</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div id="footer">
+
+    </div>
+     
+</body>
+</html>
+
+<script src="./scripts/sCheckout.js" type="module">
+</script>
