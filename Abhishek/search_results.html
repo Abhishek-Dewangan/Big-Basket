@@ -1,0 +1,156 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="./styles/header.css">
+
+    <link rel="stylesheet" href="./styles/search_results.css">
+
+    <link rel="stylesheet" href="./styles/footer.css">
+
+    <link rel="stylesheet" href="./styles/sMyBasket.css">
+
+    <link href="https://www.bbassets.com/static/v2531/uiv2/images/favicon.ico" rel="icon" type="image/ico" sizes="16x16"/>
+
+    <title>Big-Basket Search Results..</title>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="mediaHeader"></div>
+
+    <!-- <div id = "sbaskMain">
+        <div id = "sBask"></div>
+        <div id = "sBaskTdiv">
+            <div id = "sbaskDeliv1">
+                <p>**Actual Delivery Charges computed at checkout</p>
+                <a href="https://www.bigbasket.com/delivery-charge-new/">?</a>
+            </div>
+            
+            <div id = "sbaskDeliv2">
+                <div id = "sbaskSubT1">
+                    <p>Sub Total :</p>
+                    <p id ="stotalPrice"></p>
+                </div>
+                <div id = "sbaskSubT2">
+                    <p>Delivery Charge :</p>
+                    <p id="p_delivery"></p>
+                </div>
+                <button id = "sCheckoutBtn">View Basket & Checkout</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- MAIN BODY CONTENT -->
+
+    <div id="p_topFoodContainer">
+        <div id="p_filtersContainer">
+            <div id="p_resetBtnDiv">
+                <button id="p_resetButton">
+                    CLEAR &times;
+                </button>
+            </div>
+            <div class="p_FiltersDiv">
+                <h5>
+                    <span class="p_filterName">
+                        Category
+                    </span>
+                </h5>
+                <!-- <div id="p_brandCheckbox" class="p_checkboxDiv">
+                    
+                </div> -->
+                <h6 class="p_categoryHeader">Fruits & Vegetables</h6>
+                <ul class="p_categorySubHeader">
+                    <li>Foodgrains, Oil & Masala</li>
+                    <li>Bakery, Cakes & DairyCookies</li>
+                    <li>Beverages</li>
+                    <li>Snack & Branded Foods</li>
+                    <li>Eggs, Meat & Fish</li>
+                    <li>Gourmet & World Food</li>
+                </ul>
+            </div>
+            <div class="p_FiltersDiv">
+                <h5>
+                    <span class="p_filterName">
+                        Brands
+                    </span>
+                </h5>
+                <div id="p_brandCheckbox" class="p_checkboxDiv">
+                    
+                </div>
+            </div>
+            <div class="p_FiltersDiv">
+                <h5>
+                    <span class="p_filterName">
+                        Food Preferences
+                    </span>
+                </h5>
+                <div id="p_foodPrefCheckbox" class="p_checkboxDiv">
+                    
+                </div>
+            </div>
+            <div class="p_FiltersDiv">
+                <h5>
+                    <span class="p_filterName">
+                        Price
+                    </span>
+                </h5>
+                <div id="p_foodPriceCheckbox" class="p_checkboxDiv">
+                    
+                </div>
+            </div>
+            <div class="p_FiltersDiv">
+                <h5>
+                    <span class="p_filterName">
+                        Discount
+                    </span>
+                </h5>
+                <div id="p_foodDiscountCheckbox" class="p_checkboxDiv">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="p_productsContainer">
+            <div id="p_productsHeader">
+                <h3><span id="p_totalItems">Foodgrains, Oil & Masala</span></h3>
+                <div>
+                    <select id="p_foodgrainSorter">
+                        <option value="--">
+                           --- Sort Items By ---
+                        </option>
+                        <option value="p_pop">Popularity</option>
+                        <option value="p_l2h">Price - Low To High</option>
+                        <option value="p_h2l">Price - High To Low</option>
+                        <option value="p_alpha">Alphabetical</option>
+                        <option value="p_disch2l">Discount - High To Low</option>
+                    </select>
+                </div>
+            </div>
+            <div id="p_productAll">
+                <p>
+                    <i class="fa-solid fa-truck"></i>
+                    ALL PRODUCTS
+                </p>
+            </div>
+            <div id="p_productsDisplayGrid">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- BODY CONTENT ENDS -->
+
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script src="./scripts/header_dropdown.js" type="module"></script>
+
+<script src="./scripts/search_page.js" type="module"></script>
+
+<script src="./scripts/sBasket.js"></script>
+<!-- <script src="./scripts/data.js"></script> -->
