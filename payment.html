@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big Basket - Checkout Page</title>
+    <link rel="stylesheet" href="./styles/payment.css">
+    <link href="https://www.bbassets.com/static/v2531/uiv2/images/favicon.ico" rel="icon" type="image/ico" sizes="16x16"/>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
+    <style></style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- <div id="a_navbar">
+      <div class="logo">
+        <a href="myheader.html"
+          ><img
+            src="https://www.bigbasket.com/static/v2489/common/img/bb_logo.png"
+            alt=""
+        /></a>
+      </div>
+      <div class="careNum">
+        <h2>1860 123 1000</h2>
+      </div>
+    </div>
+    <hr /> -->
+
+    <div id="p_smallHeader">
+      <a href="index.html">
+        <img src="https://www.bbassets.com/static/v2531/custPage/build/content/img/bb_logo.png" alt="">
+    </a>
+    </div>
+
+    <!-- Body of Payment Page -->
+    <div id="a_body">
+      <!-- Address  personal Details -->
+      <!-- <div id="p_saved">
+        <p>Saved Address</p>
+        <div id="p_add">
+          "Shivaji Nagar, Malad (E), Mumbai - 400011"
+        </div>
+      </div> -->
+      <form id="a_left">
+        <div id="p_saved">
+          <h3>Saved Address</h3>
+          <div id="p_add">
+            Shivaji Nagar, Malad (E), Mumbai - 400011
+          </div>
+          <div id="p_changeBtn">CHANGE ADDRESS</div>
+        </div>
+        <div id="a_addressForm">
+          <h3>Personal Details</h3>
+          <div id="a_personal">
+            <p>Enter first name</p>
+            <p>Enter last name</p>
+            <p>Enter contact number</p>
+            <input class="aInput" type="text" id="aFname" placeholder="Enter First Name" required />
+            <input class="aInput" type="text" id="aLname" placeholder="Enter Last Name" required />
+            <input class="aInput" type="number" id="aNumber" placeholder="Enter Contact Number" required />
+            </div>
+          <h3>Address Details</h3>
+          <div id="a_address">
+            <p>House number</p>
+            <p>Enter apartment name</p>
+            <input class="aInput" type="text" placeholder="Enter house number"  />
+            <input class="aInput" type="text" placeholder="Enter apartment name" />
+            <p>Enter street details</p>
+            <p>Enter landmark for easy reach out</p>
+            <input class="aInput" type="text" id="aStreet" placeholder="Enter street details" />
+            <input class="aInput" type="text" id="aLandmark" placeholder="Enter landmark" />
+          </div>
+          <div id="a_select">
+            <p>Enter city name</p>
+            <p>Area detail</p>
+            <p>Enter Pincode</p>
+            <select name="" class="aSelect">
+              <option value="--">Select City</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="pune">Pune</option>
+              <option value="banglore">Banglore</option>
+              <option value="hyderabad">Hyderabad</option>
+              <option value="chennai">Chennai</option>
+            </select>
+            <select name="" class="aSelect">
+              <option value="--">Select Locality</option>
+              <option value="andheri">Andheri</option>
+              <option value="bandra">Bandra</option>
+              <option value="goregaon">Goregaon</option>
+              <option value="juhu">Juhu</option>
+              <option value="borivalli">Borivalli</option>
+            </select>
+            <input class="aInput" type="number" placeholder="Enter PIN Code" required />
+          </div>
+          <div>
+            <p style="margin-left: 0px">Choose nick name for this address</p>
+            <select name="" class="aSelect">
+              <option value="home">HOME</option>
+              <option value="office">OFFICE</option>
+              <option value="other">OTHER</option>
+            </select>
+          </div>
+          <div>
+            <p>
+              <input class="aInput" type="checkbox" id="aAddress" /> Set this as
+              my default delivery address
+            </p>
+          </div>
+          <div id="aAddCancel">
+            <button>ADD ADDRESS</button>
+            <button>CANCEL</button>
+          </div>
+          </div>
+      </form>
+
+      <!-- Apply Voucher & Order Summary-->
+      <div id="a_right">
+        <h3>Apply Voucher</h3>
+        <div id="aTop">
+          <input
+            id="aVoucher"
+            type="text"
+            placeholder="Enter voucher code"
+            required
+          />
+          <button id="aApply" onclick="apply('basket20')">Apply</button>
+          <p class="voucherApply">(Apply voucher code if available)</p>
+        </div>
+        <h3>Order Summary</h3>
+        <div id="aOrderSummary">
+          <div class="aSummary">
+            <p>Basket Value</p>
+            <div class="aPrice">
+              <!-- <p>Rs</p> -->
+              <p id="aBasketPrice">Rs. 1000</p>
+            </div>
+          </div>
+          <div class="aSummary">
+            <p>Delivery Charges</p>
+            <div class="aPrice">
+              <!-- <p>Rs</p> -->
+              <p id="p_del_charges"></p>
+            </div>
+          </div>
+          <hr />
+          <div class="aSummary">
+            <h3>Total Amount Payable</h3>
+            <div class="aPrice">
+              <!-- <h3>Rs</h3> -->
+              <h3 id="aTotalAmount">Rs 1000</h3>
+            </div>
+          </div>
+          <div class="aSummary" id="aSavingsDiv">
+            <p>Total Savings</p>
+            <div class="aPrice">
+              <!-- <p>Rs</p> -->
+              <p id="aTotalSaving">Rs. 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p_delivery">
+      <h3>Delivery Options</h3>
+      <p class="p_del_header">Select Delivery Mode</p>
+      <select name="" id="p_delivery_type">
+        <option value="bbstandard">BB Standard</option>
+        <option value="bbexpress">BB Express</option>
+      </select>
+      <p class="p_del_header">Select Delivery Date</p>
+      <select name="" id="p_delivery_date">
+        <option value="1">Today - 02 April</option>
+        <option value="2">Tomorrow - 03 April</option>
+      </select>
+      <div id="p_delivery_time_grid">
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">10:00 - 11:00 A.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">12:00 - 01:00 P.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">01:00 - 02:00 P.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">04:00 - 05:00 P.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">05:00 - 06:00 P.M.</p>
+        </div>
+        <div class="p_del_class">
+          <i class="fa-solid fa-clock"></i>
+          <p class="p_del_time">06:00 - 08:00 P.M.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Credit / Debit Payment -->
+    <div id="ap_main">
+      <h3>Payment Option</h3>
+      <div id="a_payment">
+        <div id="ap_left">
+          <button id="a_credit" onclick="cardPay()">Credit / Debit Card</button>
+          <button id="p_upi" onclick="upiPay()">UPI</button>
+          <button>Netbanking</button>
+          <button>Wallet</button>
+          <button>Pay Later</button>
+          <button>Cash/Card on Delevery</button>
+        </div>
+        <div id="ap_right">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let payDetail = document.getElementById('ap_right');
+
+  // Checking Hardcoded Card Details
+  const order = () => {
+    let cardNumber = document.getElementById('a_cardNumber').value;
+    let valid = document.getElementById('a_valid').value;
+    let cvv = document.getElementById('acvv').value;
+    console.log(cardNumber, valid, cvv);
+    if (cardNumber == '1234-5678-9123' && valid == '2022-01' && cvv == '123') {
+      window.location.href = 'otp.html';
+    } else {
+      alert('Wrong card details entered. Please try again.');
+    }
+    // window.location.href = 'otp.html';
+  };
+
+  // Credit Card Payment Div Open On Click
+  const cardPay = () => {
+    let rightDiv = `<h3>Add Credit / Debit card</h3>
+          <div>
+            <p>Card Number</p>
+            <input class= "aInput" type="text" id="a_cardNumber" required />
+          </div>
+          <div id="a_cvv">
+            <p>Valid Through</p>
+            <p>CVV</p>
+            <input type="month" id= "a_valid" class= "aInput"/>
+            <input type="number" id= "acvv" class= "aInput"/>
+          </div>
+          <div>
+            <p><input type="checkbox" /> Save this card for faster Payments</p>
+            <button onclick="order()" id="a_pay"">Place order & Pay</button>
+          </div>`;
+    payDetail.innerHTML = rightDiv;
+  };
+
+  cardPay();
+
+  const upiPay = () => {
+    let rightDiv = `<h3>Pay via UPI</h3>
+          <div id="upiType">
+            <div class="upiOption">
+              <img src="https://i0.wp.com/zeevector.com/wp-content/uploads/Bhim-Logo-Vector.png?resize=600%2C137&ssl=1" alt="">
+            </div>
+            <div class="upiOption">
+              <img src="https://www.logo.wine/a/logo/Paytm/Paytm-Logo.wine.svg" alt="">
+            </div>
+            <div class="upiOption">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Pay_Logo_%282020%29.svg/1920px-Google_Pay_Logo_%282020%29.svg.png" alt="">
+            </div>
+            <div class="upiOption">
+              <img src="https://www.logo.wine/a/logo/PhonePe/PhonePe-Logo.wine.svg" alt="">
+            </div>
+            <div class="upiOption">
+              <img src="https://www.logo.wine/a/logo/Amazon_Pay/Amazon_Pay-Logo.wine.svg" alt="">
+            </div>
+            <div class="upiOption">
+              Other UPI Apps
+            </div>
+          </div>`
+          payDetail.innerHTML = rightDiv;
+  }
+
+  // Order Summary Details
+  // let basket = document.getElementById('aBasketPrice');
+  // let basketValue = document.getElementById('aBasketPrice').innerText;
+  // // let deleveryCharge = document.getElementById('aDeleveryCharge').innerText;
+  // let totalAmount = document.getElementById('aTotalAmount');
+  // totalAmount.innerText = +basketValue + +deleveryCharge;
+
+
+  let p_voucherApplied = false;
+
+  // Apply Voucher
+  const apply = (voucher) => {
+    let applyVoucher = document.getElementById('aVoucher').value;
+    let saving = document.getElementById('aTotalSaving');
+    if (applyVoucher == voucher) {
+      // let saveMoney = (basketValue * 20) / 100;
+      // let finalPrice = basketValue - saveMoney;
+      // basket.innerText = finalPrice;
+      // totalAmount.innerText = +basket.innerText + +deleveryCharge;
+      // saving.innerText = saveMoney;
+      p_voucherApplied = true;
+      p_calculateTotalAndDisplay();
+      let voucherText = document.querySelector(".voucherApply");
+      voucherText.textContent = "Congratulations! extra 20% OFF."
+      voucherText.classList.add("appliedTrue");
+    } else {
+      alert('Invalid Voucher');
+    }
+  };
+
+  let bbExpressSelected = false;
+
+  // Function to calculate total price and show it
+
+  let bigBasketCart = JSON.parse(localStorage.getItem("bigBasketCart")) || [];
+
+  const p_calculateTotalAndDisplay = () => {
+      let total = bigBasketCart.reduce((acc, el) => {
+          return acc + (el.prod_price * el.prod_quantity);
+      }, 0)
+
+      let totalSavings = 0;
+
+      for(let item of bigBasketCart){
+        if(item.prod_strike_price != 0){
+          totalSavings += ((item.prod_strike_price - item.prod_price) * item.prod_quantity);
+        }
+      }
+
+      
+
+      if(p_voucherApplied){
+        total = Math.round(total * 0.8);
+      }
+      if(p_voucherApplied) totalSavings = totalSavings + Math.round(total*0.2);
+
+      
+      let grand_total = total+50;
+
+      if(bbExpressSelected){
+        grand_total = total + 100;
+      }
+      // console.log(typeof(total), typeof(totalSavings));
+
+      document.getElementById("aBasketPrice").textContent = `Rs. ${total}`;
+
+      document.getElementById("aTotalAmount").textContent = `Rs. ${grand_total}`;
+
+      document.getElementById("aTotalSaving").textContent = `Rs. ${totalSavings}`;
+
+      if(bbExpressSelected)
+        document.getElementById("p_del_charges").innerHTML = `Rs. 150`;
+      else
+        document.getElementById("p_del_charges").innerText = `Rs. 50`;
+  }
+
+  p_calculateTotalAndDisplay();
+
+
+  let p_delTimeDivs = document.querySelectorAll(".p_del_class");
+  let selected = null;
+
+  for(let i=0; i<p_delTimeDivs.length; i++){
+    let current = p_delTimeDivs[i];
+    current.addEventListener("click", () => {
+      if(selected){
+        selected.style.backgroundColor = "whitesmoke";
+        current.style.backgroundColor = "#bfe08e";
+        selected = current;
+      }
+      else{
+        current.style.backgroundColor = "#bfe08e";
+        selected = current;
+      }
+    })
+  }
+
+  
+
+  let deliveryType = document.getElementById("p_delivery_type");
+  deliveryType.addEventListener("change", () => {
+    if(deliveryType.value === "bbexpress"){
+      bbExpressSelected = true;
+      p_calculateTotalAndDisplay();
+    }
+    else{
+      bbExpressSelected = false;
+      p_calculateTotalAndDisplay();
+    }
+  })
+
+
+  let clickCount = 1;
+  let addForm = document.querySelector("#a_addressForm");
+  let delDiv = document.querySelector("#p_delivery");
+  let topDiv = document.querySelector("#a_left");
+  let addBtn = document.querySelector("#p_changeBtn");
+
+  addBtn.addEventListener("click", () => {
+    clickCount = (clickCount + 1) % 2;
+    // console.log("count", clickCount);
+    if(innerWidth >= 700){
+        if(clickCount){
+        addForm.style.display = "none";
+        delDiv.style.marginTop = "-200px";
+        topDiv.style.height = "100px";
+        addBtn.textContent = "CHANGE ADDRESS";
+      }
+      else{
+        topDiv.style.height = "600px";
+        addForm.style.display = "block";
+        delDiv.style.marginTop = "30px";
+        addBtn.textContent = "CLOSE";
+      }
+    }
+
+    if(innerWidth < 700){
+      window.location.href = "smallAddress.html";
+    }
+    
+  })
+
+
+  window.addEventListener("resize", () => {
+    if(innerWidth <= 700){
+      if(delDiv.style.marginTop === "-200px"){
+        delDiv.style.marginTop = "50px";
+      }
+    }
+    else{
+      delDiv.style.marginTop = "-200px";
+    }
+  })
+
+</script>
