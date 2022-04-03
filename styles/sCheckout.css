@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+
+#p_smallHeader{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a5cd39;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top:0px;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#p_smallHeader > img{
+    height: 80%;
+}
+
+
+
+
+#sCheckoutBody{
+    background-color:rgb(243, 243, 243);
+    /* font-family: "Roboto Slab", serif; */
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    font-style: normal;
+    margin-top: 80px;
+    /* box-sizing: content-box; */
+}
+#scheckoutTable,
+td,
+#sThead {
+border: 1px solid #ddd;
+text-align: left;
+}
+
+#scheckoutTable {
+border-collapse: collapse;
+width: 100%;
+margin-top: 50px;
+border:none;
+}
+
+th,
+td {
+padding: 3px 14px 3px 14px;
+}
+td{
+border:none;
+height:50px;
+max-height: 30px;
+border-bottom:1px solid black;
+}
+
+tr > th {
+background-color: #555;
+color: #fff;
+font-weight:400;
+font-size:14px;
+}
+
+#stSavings{
+background-color: #c6cc74;
+text-align: center;
+width:10%;
+color:black;
+}
+#sFirstdiv{
+display:flex;
+font-size:24px;
+color:black;
+/* border-bottom:1px solid black; */
+/* padding:0; */
+margin-top:-20px;
+margin-bottom:-20px;
+font-family: 'Roboto Serif', serif;
+/* font-family: 'Montserrat', sans-serif; */
+}
+#scheckoutMain{
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+padding:10px;
+width:70%;
+height:auto;
+margin-right:auto;
+margin-left:auto;
+margin-top:20px;
+}
+#stDesc{
+padding:12px 0px 12px 16px;
+width:45%;
+}
+#scheckoutTableMain{
+margin-top:-10px;
+}
+#stImage{
+max-width:2%;
+}
+#stdItem{
+/* line-height:0.2rem; */
+height:30px;
+margin-top:-20px;
+padding-bottom: 0px;
+}
+#stdUnit{
+width:70px;
+margin-top:-12px;
+margin-left:5px;
+}
+#stdPrice{
+font-size:14px;
+}
+#stdStrike{
+text-align:right;
+font-size:11px;
+margin-right:12px;
+margin-top:-15px;
+text-decoration: line-through;
+}
+#stdQty{
+display:flex;
+align-items: center;
+justify-content:center;
+width:60px;
+border:1px solid black ;
+border-radius:5px;
+height:20px;
+/* margin-left:-40px; */
+margin-top:-10px;
+/* margin-top:px; */
+}
+#stdMinusBtn{
+height:20px;
+width:15px;
+align-items: center;
+justify-content:center;
+display:flex;
+background-color: #eaeaea;
+border:none;
+}
+#stdPlusBtn{
+height:20px;
+width:15px;
+align-items: center;
+justify-content:center;
+display:flex;
+background-color: #eaeaea;
+border:none;
+}
+#stdPlusBtn:hover{
+cursor:pointer;
+}
+#stdMinusBtn:hover{
+cursor:pointer;
+}
+#stdInput{
+width:15px;
+margin-left:3px;
+margin-right:3px;
+border:none;
+text-align: center;
+}
+#stdQtyMain{
+/* display:flex; */
+justify-content: center;
+align-items: center;
+margin:auto;
+/* min-height: 52px; */
+}
+#stdTotal{
+display:flex;
+justify-content:space-around;
+margin-left:-10px;
+margin-top:-20px;
+font-size:14px;
+}
+#stbodyTableRow{
+max-height:50px;
+border:none;
+}
+#stdCat{
+font-size:10px;
+text-transform: uppercase;
+/* display:inline-block; */
+color:#888;
+height:auto;
+padding:0px;
+}
+#stdCat:hover{
+cursor:pointer;
+color:green;
+}
+#stdItemName{
+font-size: 15px;
+padding:0px 0px 8px;
+max-width: 80%;
+overflow:hidden;
+text-overflow: ellipsis;
+display:block;
+white-space:nowrap;
+margin-top:-10px;
+}
+#stdSavings{
+height:20px;
+margin-top:-20px;
+margin-left: auto;
+margin-right: auto;
+color:#be1e2d;
+font-size: 14px;
+}
+#stdSavingsMain{
+border-left:5px solid #dfdfdf;
+margin-left: auto;
+margin-right: auto;
+padding-bottom:0px;
+}
+#stdItemMain{
+height:20px;
+max-height:30px;
+max-width: 80%;
+/* border:1px solid red; */
+}
+#checkoutLength{
+margin-left:10px;
+}
+#sbaskThs{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    height:270px;
+    margin-top:30px;
+}
+#sbaskLhs{
+    width:40%;
+    display:grid;
+    padding-top:20px;
+    padding-left:10px;
+}
+#sbaskRhs{
+    width:42%;
+    border:1px solid #444;
+    box-shadow: rgba(30, 30, 30, 0.25) 0px 8px 30px -12px inset, rgba(0, 0, 0, 0.3) 0px 4px 6px -18px inset;
+    border-radius:10px;
+}
+#sbsavingsMainDiv{
+    display:flex;   
+    justify-content: space-around;
+}
+#sbSubTotal1{
+    display:flex;
+    /* border:1px solid red; */
+    justify-content: space-between;
+    padding-left:15px;
+    padding-right:30px;
+    color:#555;
+    font-weight:400;
+    font-size:14px;
+}
+#sbSubTotal2{
+    display:flex;
+    /* border-bottom:0.5px solid black; */
+    justify-content: space-between;
+    padding-left:15px;
+    padding-right:30px;
+    margin-top:-25px;
+    color:#555;
+    font-weight:400;
+    font-size:14px;
+}
+#sbsavingsDiv1{
+    width:80%;
+    justify-content: space-around;
+    border-right:1px solid #555;
+    /* padding-left:10px; */  
+}
+#sbMainTotal{
+    display:flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size:22px;
+    padding-left:15px;
+    padding-right:30px;
+    margin-top:-20px;
+    
+}
+#sbCheckOutBtnDiv{
+ margin-left:52%;
+ border-radius:10px;
+ width:200px;
+ background-color:#f2ca76;
+ border:none;
+ cursor:pointer;
+}
+#sbCheckOutBtnDiv:hover{
+    background-color: #c29943;
+}
+#sbCheckBtnDiv{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:50px;
+}
+#sbCheckBtn{
+    font-size: 19px;
+    margin-right:10px;
+    font-family:sans-serif;
+}
+.fa-circle-arrow-right{
+    font-size:20px;
+}
+#sbSavingsImageDiv{
+    line-height:0.1 rem;
+    margin:auto;
+}
+#sbYouSaved{
+    margin-top:10px;
+    font-size:13px;
+    color: #e7685d;
+    font-weight:700;
+}
+#sbYouSavedAmount{
+    margin-top:-10px;
+    font-size:12px;
+    color: #e7685d;
+    font-weight:700;
+}
+#sbPiggyBank{
+    padding-right:15px;
+    padding-left:15px;
+    /* filter: invert(57%) sepia(60%) saturate(4267%) hue-rotate(329deg) brightness(106%) contrast(81%); */
+    height:32px;
+    width:32px;
+}
+#sbYouSavedDiv{
+    margin-top:-10px;
+    align-items: center;
+}
+#sbEmpty{
+    height:35px;
+    font-size:12px;
+    width:32%;
+    border-radius:5px;
+    color: #6d6e71;
+    float:left;
+    border:0.5px solid green;
+    font-weight:700;
+    cursor:pointer;
+    margin-top:-18px;
+    font-family: 'Montserrat', sans-serif;
+}
+#sbEmpty:hover{
+    background-color: crimson;
+    border: none;
+    color: #fff;
+}
+#sbContShop{
+    height:50px;
+    font-size:20px;
+    width:37%;
+    border-radius:5px;
+    border:1px solid #e4e4e4;
+    color:#555;
+    font-size:12px;
+    font-weight:bold; 
+    box-shadow: 2px 2px 2px #ccc;
+    height:35px;
+    cursor:pointer;
+    margin-top:25%;
+    font-family: 'Montserrat', sans-serif;
+}
+#sbContShop:hover{
+    background-color: #738d2b;
+    color: #fff;
+}
+.fa-basket-shopping{
+    margin-right:10px;
+}
+#sbQuestionMarkDiv{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.fa-circle-question{
+    color:#6dd139;
+    font-size:10px;
+    margin-left:5px;
+    margin-top:2px
+}
+hr1{
+    margin-top:-10px;
+}
+#hr2{
+    margin-top:-10px;
+}
+#sbDelivChargeDiv{
+    font-size:14px;
+    font-weight: 400;
+    color:#444;
+    padding-left:10px;
+}
+#sbCouponDiv{
+    display:flex;
+    font-size:14px;
+    font-weight: 400;
+    color:#444;
+    padding-left:5px;
+}
+#sbCoupon{
+    margin-right:5px;
+}
+#stdRemove:hover{
+    cursor:pointer;
+    color:#6dd139;
+}
+
+
+
+#sCheckoutBody > #footer {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+
+
+
+
+
+/* CSS MEDIA QUERIES */
+
+
+@media all and (max-width:700px){
+    #scheckoutMain{
+        width:100%;
+        height:auto;
+    }
+    th,
+    td {
+    padding: 0
+    }
+    tr > th {
+    background-color: #555;
+    color: #fff;
+    font-weight:400;
+    font-size:10px;
+    }
+    #sThead>#sTrow{
+    padding:0px
+    }
+    #stImage{
+    width:0px;
+    }
+    #scheckoutTable,
+    td,
+    #sThead {
+    border: 1px solid #ddd;
+    text-align: left;;
+    width:380px;
+    }
+    #sTrow>#stDesc{
+    width:10%;
+    max-width: 90px;
+    background-color: #555;
+    padding-left:0px;
+    }
+    #stdCat{
+    font-size:8px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display:block;
+    white-space:nowrap;
+    }
+    #stdItemName{
+    font-size:13px;
+    padding-top:2px;
+    }
+    #stImage{
+    width:1%;
+    }
+    td{
+    border:none; 
+    border-bottom:1px solid black;
+    }
+    #stdItem{
+    text-align:left;
+    width:80px;
+    }
+    #stdPrice{
+    font-size:13px
+    }
+    #stdStrike{
+    font-size:10px;
+    padding-right:3px;
+    }
+    #stdUnitMain{
+    width:2%;
+    }
+    #stUnit{
+    padding-left:2px;
+    width:7%;
+    }
+    #stdUnit{
+    width:100%;
+    }
+    #stdQtyMain{
+    width:2%;
+    }
+    #stdQty{
+    width:78%;
+    height:15px;
+    justify-content:center;
+    padding-left:5px;
+    margin-left:3px;
+    }
+    #stdMinusBtn{
+    height:10px;
+    width:7px;
+    }
+    #stdInput{
+    font-size:10px
+    }
+    #stdPlusBtn{
+    height:10px;
+    width:7px;
+    }
+    #stQty{
+    width:2%;
+    padding-left:5px;
+    }
+    #stTotal{
+    width:8%;
+    padding-left:3px;
+    }
+    #stdTotal{
+    display:grid;
+    align-items: center;
+    justify-content:center;
+    }
+    #stdTotalPrice{
+    font-size:13px;
+    padding-top:10px;
+    }
+    #stdRemove{
+    margin-top:-15px;
+    text-align:center;
+    justify-content:center;
+    }
+    #stdSavings{
+    font-size:13px;
+    margin-top:1px;
+    }
+    #stdSavingsMain{
+        border-left:3px solid #dfdfdf;
+    }
+#sbaskThs{
+    display:grid;
+    width:100%;
+    margin-left:-10px;
+}
+#sbaskLhs{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+    justify-content:space-between;
+}
+#sbEmpty{
+    width:150px;
+}
+#sbContShop{
+    width:180px;
+    margin-top:-20px;
+}
+#sbaskRhs{
+    width:100%;
+    margin-top:20px;
+    margin-left:10px;
+    height:210px;
+}
+#sbsavingsDiv1{
+    height:100px;
+}
+#sbSubTotal1{
+    margin-top:-10px;
+}
+#sbSubTotal2{
+    border:none;
+}
+#hr1{
+    margin-top:-10px;
+}
+#sbCheckOutBtnDiv{
+    margin-left:50%;
+    height:30px;
+    width:150px;  
+}
+#sbCheckBtnDiv{
+    justify-content:center;
+    text-align:center; 
+    height:100%;
+}
+#sbCheckBtn{
+    font-size:15px;
+}
+.fa-circle-arrow-right{
+    font-size:15px;
+}
+#sbPiggyBank{
+    margin-top:-20px
+}
+#sbDelivCharge{
+    margin-top:10px;
+    font-size:13px;
+}
+#sbCoupon{
+    font-size:13px;
+}
+}
+
