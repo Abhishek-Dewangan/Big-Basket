@@ -5,7 +5,7 @@
 
 *Tools Used To Build. VS Code Git Zoom Slack
 
-*How To Run it Locally: . you can download the compelete file,store in a folder. .you can run the index.html file using a browser.
+*How To Run it Locally: . you can download the compelete file,store in a folder. .you can run the index.html file using a browser in any system or mobile.
 
 Team Big-Basket
 1. Abhishek Dewangan(Myself)
