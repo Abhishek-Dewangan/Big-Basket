@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+body{
+font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+#p_smallHeader{
+height: 100px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #a5cd39;
+position: fixed;
+left: 0px;
+right: 0px;
+top:0px;
+z-index: 1000;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+  button {
+    background-color: yellowgreen;
+    border: none;
+    padding: 3px;
+  }
+  #a_navbar {
+    /* margin: 20px 50px; */
+    display: flex;
+    justify-content: space-between;
+  }
+  #a_otp{
+      margin: 100px auto;
+      margin-top: 130px;
+      width: 30%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      height: 300px;
+      padding: 10px;
+      background-color: whitesmoke;
+      font-family: 'Montserrat', sans-serif;
+  }
+  #a_otp>h2{
+    line-height: 50px;
+  }
+  #a_otp>p{
+    font-size: 18px;
+    color: grey;
+    margin-top: 20px;
+  }
+  #a_otp>input{
+    width: 70%;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  #a_otp>button{
+    margin-top: 30px;
+    width: 70%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid green;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  #a_otp>button:hover{
+    background-color: rgb(118, 190, 2);
+  }
+
+
+  
+
+  /* CSS MEDIA QUERIES */
+
+  @media all and (max-width: 700px){
+    #p_smallHeader{
+        height: 60px;
+        width: 100%;
+    }
+    #p_smallHeader > img{
+        height: 90%;
+    }
+
+    #a_otp{
+        width: 80%;
+        margin: auto;
+        margin-top: 130px;
+        height: 60vh; 
+    }
+  }

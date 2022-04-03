@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/otp.css">
+    <link href="https://www.bbassets.com/static/v2531/uiv2/images/favicon.ico" rel="icon" type="image/ico" sizes="16x16"/>
+    <title>Big Basket - Payment Gateway</title>
+  </head>
+  <body>
+    <!-- <div id="a_navbar">
+      <div class="logo">
+        <a href="myheader.html"
+          ><img
+            src="https://www.bigbasket.com/static/v2489/common/img/bb_logo.png"
+            alt=""
+        /></a>
+      </div>
+      <div class="careNum">
+        <h2>1860 123 1000</h2>
+      </div>
+    </div> -->
+
+    <div id="p_smallHeader">
+      <a href="index.html">
+        <img src="https://www.bbassets.com/static/v2531/custPage/build/content/img/bb_logo.png" alt="">
+    </a>
+    </div>
+
+    <center id="a_otp">
+      <h2>Payment Verification</h2>
+      <p>Please enter the <b>One Time Password (OTP)</b> received on our mobile</p>
+      <input type="password" placeholder="Enter OTP" />
+      <button onclick="otp()">
+        Enter OTP
+      </button>
+    </center>
+  </body>
+</html>
+<script>
+  function otp() {
+    var enter = document.querySelector('input').value;
+    if (enter == 1234) {
+      window.location.href = 'successful.html';
+    } else {
+      alert('invalid otp');
+    }
+  }
+</script>
